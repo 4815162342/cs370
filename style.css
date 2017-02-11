@@ -1,0 +1,139 @@
+.header1 {
+  background-color: #676CFB;
+  height: 100px;
+  width: 100%;
+  opacity: 1;
+}
+
+.logoedits {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+
+.productnameedits {
+  font-family: Open Sans;
+  text-decoration: none;
+  color: white;
+  font-size: 1.9em;
+  float: left;
+  margin-top: 7px;
+  margin-left: 10px;
+}
+
+.productnameedits:hover{
+  color: #666666;
+}
+
+.menubutton {
+  font-family: Open Sans;
+  float: right;
+  margin-top: 35px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: white;
+}
+
+.menubutton2 {
+  float: right;
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
+}
+
+.menubutton2:hover {
+  font-weight: bold;
+}
+
+.red {
+  color: white;
+}
+
+.grey {
+  background-color: #666666;
+  font-family: Open Sans;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:visited,
+.btn-default:focus {
+  background-color: #666666 !important;
+  border-color: #666666 !important;
+}
+.content{
+  
+}
+body{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+}
+
+.inputs {
+  width: 900px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  margin-left: -450px;
+}
+
+.form-control {
+  width: 250px !important;
+  height: 50px !important;
+  color: #B2B2B2 !important;
+  float: left;
+}
+
+.grey2 {
+  height: 50px;
+  width: 150px;
+}
+
+.grey2:hover {
+  font-weight: bold;
+}
+
+.menubutton3 {
+  font-family: Open Sans;
+  font-size: 1.7em;
+  color: white;
+  text-align: center;
+}
+
+.logopluspn {}
+
+.logocenter {
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  left: 50%;
+  margin-left: -40px;
+}
+
+.pncenter {
+  text-align: center;
+}
+
+.productnameedits2 {
+  font-family: Open Sans;
+  text-decoration: none;
+  color: black;
+  font-size: 3em;
+  text-align: center;
+}
+
+.logoedits2 {
+  height: 80px;
+  width: 80px;
+}
+
+.desctext{
+  color: black;
+  text-align: left;
+}
