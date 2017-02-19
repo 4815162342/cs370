@@ -1,6 +1,5 @@
 <?php
 include_once($_SERVER['DOCUMENT_ROOT']."/lib/include.php");
-var_dump($db);
 ?>
 
 <!DOCTYPE html>
