@@ -64,6 +64,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/lib/include.php");
 <script>
 	var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
 	var dog;
+	console.log("testing");
 </script>
 
 </html>
