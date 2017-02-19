@@ -1,5 +1,6 @@
 <?php
-include_once($_SERVER['DOCUMENT_ROOT']."/lib/include.php");
+include('../../db.php');
+include('lib/functions.php');
 ?>
 
 <!DOCTYPE html>
