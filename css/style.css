@@ -1,60 +1,60 @@
 .navbar-static-top {
-  background-color: #003366;
-  height: 100px;
-  width: 100%;
+	background-color: #003366;
+	height: 100px;
+	width: 100%;
 }
 
 .logoedits {
-  float: left;
-  margin-left: 10px;
-  margin-top: 10px;
-  height: 80px;
-  width: 80px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 80px;
+	width: 80px;
 }
 
 .productnameedits {
-  font-family: Open Sans;
-  text-decoration: none;
-  color: white;
-  font-size: 1.9em;
-  float: left;
-  margin-top: 7px;
-  margin-left: 10px;
-  position: fixed;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: white;
+	font-size: 1.9em;
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	position: fixed;
 }
 
 .productnameedits:hover{
-  color: #666666;
+	color: #666666;
 }
 
 .menubutton {
-  font-family: Open Sans;
-  float: right;
-  margin-top: 35px;
-  margin-right: 10px;
-  font-size: 1.2em;
-  color: white;
+	font-family: Open Sans;
+	float: right;
+	margin-top: 35px;
+	margin-right: 10px;
+	font-size: 1.2em;
+	color: white;
 }
 
 .menubutton2 {
-  float: right;
-  font-size: 1.2em;
-  color: white;
-  text-align: center;
+	float: right;
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
 }
 
 .menubutton2:hover {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .red {
-  color: white;
+	color: white;
 }
 
 .red {
-  background-color: #A30000 !important;
-  font-family: Open Sans;
-  border-color: #A30000 !important;
+	background-color: #A30000 !important;
+	font-family: Open Sans;
+	border-color: #A30000 !important;
 }
 
 .btn-default,
@@ -62,108 +62,108 @@
 .btn-default:active,
 .btn-default:visited,
 .btn-default:focus {
-  background-color: #A30000 !important;
-  border-color: #A30000 !important;
-  color: white !important;
+	background-color: #A30000 !important;
+	border-color: #A30000 !important;
+	color: white !important;
 }
 .content{
-  
+	
 }
 body{
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
 }
 
 .inputs {
-  width: 900px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  margin-left: -450px;
+	width: 900px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -450px;
 }
 
 .form-control {
-  width: 250px !important;
-  height: 50px !important;
-  color: #B2B2B2 !important;
-  float: left;
+	width: 250px !important;
+	height: 50px !important;
+	color: #B2B2B2 !important;
+	float: left;
 }
 
 .grey2 {
-  height: 50px;
-  width: 150px;
+	height: 50px;
+	width: 150px;
 }
 
 .grey2:hover {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .menubutton3 {
-  font-family: Open Sans;
-  font-size: 1.7em;
-  color: white;
-  text-align: center;
+	font-family: Open Sans;
+	font-size: 1.7em;
+	color: white;
+	text-align: center;
 }
 
 .logopluspn {}
 
 .logocenter {
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
 }
 
 .pncenter {
-  text-align: center;
+	text-align: center;
 }
 
 .productnameedits2 {
-  font-family: Open Sans;
-  text-decoration: none;
-  color: black;
-  font-size: 3em;
-  text-align: center;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: black;
+	font-size: 3em;
+	text-align: center;
 }
 
 .logoedits2 {
-  height: 80px;
-  width: 80px;
+	height: 80px;
+	width: 80px;
 }
 
 .desctext{
-  color: black;
-  text-align: left;
+	color: black;
+	text-align: left;
 }
 
 .modal-dialog{
-  left: 5% !important;
+	left: 5% !important;
 }
 
 #modal1{
-  height: 400px !important;
+	height: 400px !important;
 }
 
 .modal-content{
-  width: 435px !important;
+	width: 435px !important;
 }
 
 #exampleInputName2{
-  width: 400px !important;
+	width: 400px !important;
 }
 
 #modal2{
-  height: 200px !important;
+	height: 200px !important;
 }
 
 #dropdownbutton2{
-  margin-top: -5px;
+	margin-top: -5px;
 }
 
 .edits{
-  height: 37px;
+	height: 37px;
 }
