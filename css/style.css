@@ -1,8 +1,7 @@
-.header1 {
-  background-color: #676CFB;
+.navbar-static-top {
+  background-color: #003366;
   height: 100px;
   width: 100%;
-  opacity: 1;
 }
 
 .logoedits {
@@ -21,6 +20,7 @@
   float: left;
   margin-top: 7px;
   margin-left: 10px;
+  position: fixed;
 }
 
 .productnameedits:hover{
@@ -51,9 +51,10 @@
   color: white;
 }
 
-.grey {
-  background-color: #666666;
+.red {
+  background-color: #A30000 !important;
   font-family: Open Sans;
+  border-color: #A30000 !important;
 }
 
 .btn-default,
@@ -61,8 +62,9 @@
 .btn-default:active,
 .btn-default:visited,
 .btn-default:focus {
-  background-color: #666666 !important;
-  border-color: #666666 !important;
+  background-color: #A30000 !important;
+  border-color: #A30000 !important;
+  color: white !important;
 }
 .content{
   
@@ -136,4 +138,32 @@ body{
 .desctext{
   color: black;
   text-align: left;
+}
+
+.modal-dialog{
+  left: 5% !important;
+}
+
+#modal1{
+  height: 400px !important;
+}
+
+.modal-content{
+  width: 435px !important;
+}
+
+#exampleInputName2{
+  width: 400px !important;
+}
+
+#modal2{
+  height: 200px !important;
+}
+
+#dropdownbutton2{
+  margin-top: -5px;
+}
+
+.edits{
+  height: 37px;
 }
