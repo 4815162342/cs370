@@ -19,9 +19,9 @@ include('lib/functions.php');
 	<nav class="navbar navbar-static-top">
 		<div class="logoimg">
 			<a href="#"><img class="logoedits" src="http://virtual-force.com/wp-content/uploads/2015/05/mockup-icon.svg"></a>
-			<a href="#" class="productnameedits"><span class = "productnameedits">FindMyProtest</span></a>
+			<a href="#" class="productnameedits"><span class="productnameedits">FindMyProtest</span></a>
 			<div class="menubutton">
-				<div class="dropdown" id = "dropdownbutton2">
+				<div class="dropdown" id="dropdownbutton2">
 					<button class="btn btn-primary dropdown-toggle red edits" type="button" data-toggle="dropdown">
 						<span class="glyphicon glyphicon-menu-down red"></span>
 					</button>
@@ -34,10 +34,10 @@ include('lib/functions.php');
 			</div>
 			<p style="float: right; margin-top: 30px; margin-right: 5px; position: right">
 				<button type="button" class="btn btn-default grey" data-toggle="modal" data-target="#myModal2">
-					<span class = "menubutton2">Log In</span>
+					<span class="menubutton2">Log In</span>
 				</button>
 				<button type="button" class="btn btn-default grey" data-toggle="modal" data-target="#myModal">
-					<span class = "menubutton2">Sign Up</span>
+					<span class="menubutton2">Sign Up</span>
 				</button>
 			</p>
 		</div>
@@ -63,7 +63,7 @@ include('lib/functions.php');
 			<input type="text" class="form-control" id="exampleInputName" placeholder="City, State">
 			<input type="text" class="form-control" id="exampleInputName" placeholder="MM/DD/YYYY">
 			<input type="text" class="form-control" id="exampleInputName" placeholder="Issue or Topic">
-			<button type="button" class="btn btn-default grey2"><span class = "menubutton3">Find</span></button>
+			<button type="button" class="btn btn-default grey2"><span class="menubutton3">Find</span></button>
 		</div>
 	</div>
 
@@ -77,7 +77,7 @@ include('lib/functions.php');
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Sign Up</h4>
 				</div>
-				<div class="modal-body" id = "modal1">
+				<div class="modal-body" id="modal1">
 					<p>First Name:</p>
 					<input type="text" class="form-control" id="exampleInputName2" placeholder="John">
 					<br>
@@ -114,7 +114,7 @@ include('lib/functions.php');
 					<button type="button" class="close" data-dismiss="modal">&times;</button>
 					<h4 class="modal-title">Log In</h4>
 				</div>
-				<div class="modal-body" id = "modal2">
+				<div class="modal-body" id="modal2">
 					<p>Email:</p>
 					<input type="text" class="form-control" id="exampleInputName2" placeholder="example@email.com">
 					<br>
@@ -132,7 +132,7 @@ include('lib/functions.php');
 	</div>
 
 	<script>
-		var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
+		var popularNames=<?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
 		var dog;
 		console.log("testing");
 	</script>
