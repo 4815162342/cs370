@@ -1,1 +1,1 @@
-# cs370
+# cs370 – FindMyProtest
