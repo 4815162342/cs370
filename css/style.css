@@ -1,9 +1,10 @@
-body{
+body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+  background-color: white !important;
+  /*background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");  #0092FF #42A5F5*/
 }
 
 .navbar-static-top {
@@ -31,7 +32,7 @@ body{
   position: absolute;
 }
 
-.sitename:hover{
+.sitename:hover {
   color: #666666;
 }
 
@@ -45,11 +46,11 @@ body{
   margin-top: 30px;
 }
 
-.btn-primary{
+.btn-primary {
   height: 37px !important;
 }
 
-.acctparagraph{
+.acctparagraph {
   float: right;
   margin-top: 30px;
   margin-right: 5px;
@@ -81,84 +82,135 @@ body{
   background-color: #A30000 !important;
   border-color: #A30000 !important;
   color: white !important;
-}
-
-.homepagecontent {
-  width: 900px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  margin-left: -450px;
-}
-
-.logopndesc {
-
-}
-
-.logocenter {
-  height: 80px;
-  width: 80px;
-  position: absolute;
-  left: 50%;
-  margin-left: -40px;
-  margin-top: -78px;
-}
-
-.pncenter {
-  text-align: center;
-  margin-top: 80px;
-  font-family: Open Sans;
-  text-decoration: none;
-  color: black;
-  font-size: 3em;
-  text-align: center;
-}
-
-.desctext{
-  color: black;
-  text-align: left;
+  height: 37px;
 }
 
 .form-control {
   width: 250px !important;
   height: 50px !important;
   color: #B2B2B2 !important;
-  float: left;
 }
 
-.findbutton {
-  height: 50px;
-  width: 150px;
-}
-
-.findbutton:hover {
-  font-weight: bold;
-}
-
-.findtext {
-  font-family: Open Sans;
-  font-size: 1.7em;
-  color: white;
-  text-align: center;
-}
-
-.modal-dialog{
+.modal-dialog {
   left: 5% !important;
 }
 
-#signupmodal{
-  height: 400px !important;
+#signupmodal {
+  height: 100% !important;
 }
 
-.modal-content{
+.modal-content {
   width: 435px !important;
 }
 
-#modalinputs{
+#modalinputs {
   width: 400px !important;
   margin-bottom: 10px;
 }
 
-#loginmodal{
-  height: 200px !important;
+#loginmodal {
+  height: 100% !important;
+}
+
+.container-fluid {
+  margin-top: 50px !important;
+}
+
+.sortbutton {
+  margin-bottom: 43px !important;
+  font-family: Open Sans !important;
+  height: 50px;
+  float: right;
+  margin-left: 5px !important;
+  color: white;
+}
+
+.sortbutton:hover {
+  color: white !important;
+  font-weight: bold;
+}
+
+.input-group {
+  margin-left: 40%;
+  margin-right: 70%;
+}
+
+.searchiconspacing {
+  margin-bottom: 50px !important;
+  height: 50px !important;
+  width: 50px !important;
+}
+
+.dropdown-menu {
+  margin-top: -43px !important;
+  margin-left: 5px !important;
+}
+
+.search-view-buttons {
+  margin-right: 5px;
+  ;
+}
+
+.search-result-bottom {
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
+
+.add-button {
+  float: right;
+}
+
+.thumbnail {
+  margin-bottom: 20px;
+  padding: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.item.list-group-item {
+  float: none;
+  width: 100%;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-color: black !important;
+}
+
+.item.list-group-item:nth-of-type(odd):hover,
+.item.list-group-item:hover {
+  background: #428bca;
+}
+
+.item.list-group-item .list-group-image {
+  margin-right: 10px;
+}
+
+.item.list-group-item .thumbnail {
+  margin-bottom: 0px;
+}
+
+.item.list-group-item .caption {
+  padding: 9px 9px 0px 9px;
+}
+
+.item.list-group-item:nth-of-type(odd) {
+  background: #eeeeee;
+}
+
+.item.list-group-item:before,
+.item.list-group-item:after {
+  display: table;
+  content: " ";
+}
+
+.item.list-group-item img {
+  float: left;
+}
+
+.item.list-group-item:after {
+  clear: both;
+}
+
+.list-group-item-text {
+  margin: 0 0 11px;
 }
