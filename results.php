@@ -3,7 +3,7 @@ include('../db.php');
 include('lib/functions.php');
 ?>
 
-<!--<!DOCTYPE html>-->
+<!DOCTYPE html>
 <html>
 
 <head>
