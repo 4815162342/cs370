@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
   background-position: center center;
   background-repeat: no-repeat;
@@ -5,47 +6,61 @@ body {
   background-attachment: fixed;
   background-color: white !important;
   /*background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");  #0092FF #42A5F5*/
+=======
+body{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+>>>>>>> refs/remotes/origin/master
 }
 
 .navbar-static-top {
-  background-color: #003366;
-  height: 100px;
-  width: 100%;
+	background-color: #003366;
+	height: 100px;
+	width: 100%;
 }
 
 .logo {
-  float: left;
-  margin-left: 10px;
-  margin-top: 10px;
-  height: 80px;
-  width: 80px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	height: 80px;
+	width: 80px;
 }
 
 .sitename {
-  font-family: Open Sans;
-  text-decoration: none;
-  color: white;
-  font-size: 1.9em;
-  float: left;
-  margin-top: 7px;
-  margin-left: 10px;
-  position: absolute;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: white;
+	font-size: 1.9em;
+	float: left;
+	margin-top: 7px;
+	margin-left: 10px;
+	position: absolute;
 }
 
+<<<<<<< HEAD
 .sitename:hover {
   color: #666666;
+=======
+.sitename:hover{
+	color: #666666;
+>>>>>>> refs/remotes/origin/master
 }
 
 .menubutton {
-  font-family: Open Sans;
-  float: right;
-  margin-top: 35px;
-  margin-right: 10px;
-  font-size: 1.2em;
-  color: white;
-  margin-top: 30px;
+	font-family: Open Sans;
+	float: right;
+	margin-top: 35px;
+	margin-right: 10px;
+	font-size: 1.2em;
+	color: white;
+	margin-top: 30px;
 }
 
+<<<<<<< HEAD
 .btn-primary {
   height: 37px !important;
 }
@@ -55,23 +70,34 @@ body {
   margin-top: 30px;
   margin-right: 5px;
   position: right;
+=======
+.btn-primary{
+	height: 37px !important;
+}
+
+.acctparagraph{
+	float: right;
+	margin-top: 30px;
+	margin-right: 5px;
+	position: right;
+>>>>>>> refs/remotes/origin/master
 }
 
 .accountbuttons {
-  float: right;
-  font-size: 1.2em;
-  color: white;
-  text-align: center;
+	float: right;
+	font-size: 1.2em;
+	color: white;
+	text-align: center;
 }
 
 .accountbuttons:hover {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .red {
-  background-color: #A30000 !important;
-  font-family: Open Sans;
-  border-color: #A30000 !important;
+	background-color: #A30000 !important;
+	font-family: Open Sans;
+	border-color: #A30000 !important;
 }
 
 .btn-default,
@@ -79,6 +105,7 @@ body {
 .btn-default:active,
 .btn-default:visited,
 .btn-default:focus {
+<<<<<<< HEAD
   background-color: #A30000 !important;
   border-color: #A30000 !important;
   color: white !important;
@@ -89,6 +116,19 @@ body {
   width: 250px !important;
   height: 50px !important;
   color: #B2B2B2 !important;
+=======
+	background-color: #A30000 !important;
+	border-color: #A30000 !important;
+	color: white !important;
+}
+
+.homepagecontent {
+	width: 900px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -450px;
+>>>>>>> refs/remotes/origin/master
 }
 
 .modal-dialog {
@@ -99,6 +139,7 @@ body {
   height: 100% !important;
 }
 
+<<<<<<< HEAD
 .modal-content {
   width: 435px !important;
 }
@@ -213,4 +254,72 @@ body {
 
 .list-group-item-text {
   margin: 0 0 11px;
+=======
+.logocenter {
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -78px;
+}
+
+.pncenter {
+	text-align: center;
+	margin-top: 80px;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: black;
+	font-size: 3em;
+	text-align: center;
+}
+
+.desctext{
+	color: black;
+	text-align: left;
+}
+
+.form-control {
+	width: 250px !important;
+	height: 50px !important;
+	color: #B2B2B2 !important;
+	float: left;
+}
+
+.findbutton {
+	height: 50px;
+	width: 150px;
+}
+
+.findbutton:hover {
+	font-weight: bold;
+}
+
+.findtext {
+	font-family: Open Sans;
+	font-size: 1.7em;
+	color: white;
+	text-align: center;
+}
+
+.modal-dialog{
+	left: 5% !important;
+}
+
+#signupmodal{
+	height: 400px !important;
+}
+
+.modal-content{
+	width: 435px !important;
+}
+
+#modalinputs{
+	width: 400px !important;
+	margin-bottom: 10px;
+}
+
+#loginmodal{
+	height: 200px !important;
+>>>>>>> refs/remotes/origin/master
 }
