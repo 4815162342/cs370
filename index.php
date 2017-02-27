@@ -18,8 +18,8 @@ include('lib/functions.php');
 <body>
   <nav class="navbar navbar-static-top">
     <div class="logoimg">
-      <a href="#"><img class="logo" src="http://virtual-force.com/wp-content/uploads/2015/05/mockup-icon.svg"></a>
-      <a href="#" class="sitename"><span class = "sitename">FindMyProtest</span></a>
+      <a href="/"><img class="logo" src="img/logo.png"></a>
+      <a href="/" class="sitename"><span class = "sitename">FindMyProtest</span></a>
       <div class="menubutton">
         <div class="dropdown">
           <button class="btn btn-primary dropdown-toggle red" type="button" data-toggle="dropdown">
