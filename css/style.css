@@ -1,10 +1,18 @@
+body{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+}
+
 .navbar-static-top {
 	background-color: #003366;
 	height: 100px;
 	width: 100%;
 }
 
-.logoedits {
+.logo {
 	float: left;
 	margin-left: 10px;
 	margin-top: 10px;
@@ -12,7 +20,7 @@
 	width: 80px;
 }
 
-.productnameedits {
+.sitename {
 	font-family: Open Sans;
 	text-decoration: none;
 	color: white;
@@ -20,10 +28,10 @@
 	float: left;
 	margin-top: 7px;
 	margin-left: 10px;
-	position: fixed;
+	position: absolute;
 }
 
-.productnameedits:hover{
+.sitename:hover{
 	color: #666666;
 }
 
@@ -34,21 +42,29 @@
 	margin-right: 10px;
 	font-size: 1.2em;
 	color: white;
+	margin-top: 30px;
 }
 
-.menubutton2 {
+.btn-primary{
+	height: 37px !important;
+}
+
+.acctparagraph{
+	float: right;
+	margin-top: 30px;
+	margin-right: 5px;
+	position: right;
+}
+
+.accountbuttons {
 	float: right;
 	font-size: 1.2em;
 	color: white;
 	text-align: center;
 }
 
-.menubutton2:hover {
+.accountbuttons:hover {
 	font-weight: bold;
-}
-
-.red {
-	color: white;
 }
 
 .red {
@@ -66,23 +82,41 @@
 	border-color: #A30000 !important;
 	color: white !important;
 }
-.content{
-	
-}
-body{
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-attachment: fixed;
-	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
-}
 
-.inputs {
+.homepagecontent {
 	width: 900px;
 	position: absolute;
 	top: 30%;
 	left: 50%;
 	margin-left: -450px;
+}
+
+.logopndesc {
+
+}
+
+.logocenter {
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -78px;
+}
+
+.pncenter {
+	text-align: center;
+	margin-top: 80px;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: black;
+	font-size: 3em;
+	text-align: center;
+}
+
+.desctext{
+	color: black;
+	text-align: left;
 }
 
 .form-control {
@@ -92,59 +126,27 @@ body{
 	float: left;
 }
 
-.grey2 {
+.findbutton {
 	height: 50px;
 	width: 150px;
 }
 
-.grey2:hover {
+.findbutton:hover {
 	font-weight: bold;
 }
 
-.menubutton3 {
+.findtext {
 	font-family: Open Sans;
 	font-size: 1.7em;
 	color: white;
 	text-align: center;
 }
 
-.logopluspn {}
-
-.logocenter {
-	height: 80px;
-	width: 80px;
-	position: absolute;
-	left: 50%;
-	margin-left: -40px;
-}
-
-.pncenter {
-	text-align: center;
-}
-
-.productnameedits2 {
-	font-family: Open Sans;
-	text-decoration: none;
-	color: black;
-	font-size: 3em;
-	text-align: center;
-}
-
-.logoedits2 {
-	height: 80px;
-	width: 80px;
-}
-
-.desctext{
-	color: black;
-	text-align: left;
-}
-
 .modal-dialog{
 	left: 5% !important;
 }
 
-#modal1{
+#signupmodal{
 	height: 400px !important;
 }
 
@@ -152,18 +154,11 @@ body{
 	width: 435px !important;
 }
 
-#exampleInputName2{
+#modalinputs{
 	width: 400px !important;
+	margin-bottom: 10px;
 }
 
-#modal2{
+#loginmodal{
 	height: 200px !important;
-}
-
-#dropdownbutton2{
-	margin-top: -5px;
-}
-
-.edits{
-	height: 37px;
 }
