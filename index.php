@@ -1,9 +1,4 @@
-<?php
-include('../db.php');
-include('lib/functions.php');
-?>
-
-<!DOCTYPE html>
+<!--<!DOCTYPE html>-->
 <html>
 
 <head>
@@ -20,9 +15,7 @@ include('lib/functions.php');
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#buttons">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span> 
+          <span class="icon-"></span>
       </button>
       <a href="#"><img class="logo" src="http://virtual-force.com/wp-content/uploads/2015/05/mockup-icon.svg"></a>
       <a href="#" class="navbar-brand">FindMyProtest</a>
@@ -64,9 +57,9 @@ include('lib/functions.php');
      <div class="col-md-8">
        <form action="">
          <div class="input-group">
-         <input type="text" class="form-control" id="exampleInputName" placeholder="City, State">
-         <input type="text" class="form-control" id="exampleInputName" placeholder="MM/DD/YYYY">
-         <input type="text" class="form-control" id="exampleInputName" placeholder="Issue or Topic">
+         <input type="text" class="form-control" id="location" placeholder="City, State">
+         <input type="text" class="form-control" id="date" placeholder="MM/DD/YYYY">
+         <input type="text" class="form-control" id="issue" placeholder="Issue or Topic">
          <button type="button" class="btn btn-default findbutton"><span class = "findtext">Find</span></button>
        </div>
        </form>
@@ -87,12 +80,12 @@ include('lib/functions.php');
         </div>
         <div class="modal-body" id="modal2">
           <p>Username:</p>
-          <input type="text" class="form-control" id="modalinputs" placeholder="user_name">
+          <input type="text" class="form-control modalinputs" id="login_username" placeholder="user_name">
           <p>Password:</p>
-          <input type="password" class="form-control" id="modalinputs" placeholder="password">
+          <input type="password" class="form-control modalinputs" id="login_signup" placeholder="password">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Log In</button>
+          <button type="button" class="btn btn-default" id="login_submit" data-dismiss="modal">Log In</button>
         </div>
       </div>
 
@@ -111,28 +104,26 @@ include('lib/functions.php');
         </div>
         <div class="modal-body" id="signupmodal">
           <p>First Name:</p>
-          <input type="text" class="form-control" id="modalinputs" placeholder="John">
+          <input type="text" class="form-control modalinputs" id="firstname" placeholder="John">
           <p>Last Name:</p>
-          <input type="text" class="form-control" id="modalinputs" placeholder="Doe">
-          <p>Username:</p>
-          <input type="text" class="form-control" id="modalinputs" placeholder="user_name">
+          <input type="text" class="form-control modalinputs" id="lastname" placeholder="Doe">
+          <p>Username:</p> 
+          <input type="text" class="form-control modalinputs" id="signup_username" placeholder="user_name">
           <p>Email:</p>
-          <input type="email" class="form-control" id="modalinputs" placeholder="example@email.com">
+          <input type="email" class="form-control modalinputs" id="email" placeholder="example@email.com">
           <p>Password:</p>
-          <input type="password" class="form-control" id="modalinputs" placeholder="password">
+          <input type="password" class="form-control modalinputs" id="signup_pw" placeholder="password">
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Sign Up</button>
+          <button type="button" class="btn btn-default" id="signup_submit" data-dismiss="modal">Sign Up</button>
         </div>
       </div>
 
     </div>
-  </div>    
-	<script>
-		var popularNames=<?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
-		var dog;
-		console.log("testing");
-	</script>
+  </div>
+  
+  </div>
+  </div>
 </body>
 
 </html>
