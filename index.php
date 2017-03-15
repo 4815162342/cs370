@@ -40,6 +40,12 @@ $page_name = 'landing_page.php';
 </head>
 
 <body>
-	<?= include($page_name); ?>
+	<?php
+	include('navbar.php');
+	include($page_name);
+	
+	include('modals/signup.html');
+	include('modals/login.html');
+	?>
 </body>
 </html>
