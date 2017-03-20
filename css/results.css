@@ -142,8 +142,16 @@ body {
 }
 
 .dropdown-menu {
-  margin-top: -43px !important;
+  margin-top: 1px;
   margin-left: 5px !important;
+}
+
+.sort-menu{
+  margin-top: -42px !important;
+}
+
+.menu-dropdown{
+  margin-top: 43px !important;
 }
 
 .search-view-buttons {

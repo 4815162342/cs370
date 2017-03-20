@@ -112,11 +112,13 @@ body{
 	color: black;
 	font-size: 3em;
 	text-align: center;
+  margin-bottom: 10px;
 }
 
 .desctext{
 	color: black;
-	text-align: left;
+	text-align: center;
+  font-size: 16px;
 }
 
 .form-control {
@@ -153,9 +155,8 @@ body{
 .modal-content{
 	width: 435px !important;
 }
-
-#modalinputs{
-	width: 400px !important;
+.modalinputs{
+	width: 350px !important;
 	margin-bottom: 10px;
 }
 

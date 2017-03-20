@@ -10,7 +10,6 @@ $request_uri = str_replace('/', '', $_SERVER['REQUEST_URI']);
 if ($request_uri == '')
 	$page_name = 'landing_page.php';
 
-
 // Check if URL is a username
 if (!$page_name) {
 	$user_prep = $db->prepare("SELECT * FROM users WHERE username = ?");
@@ -25,7 +24,6 @@ if (!$page_name) {
 // If none of the others triggered, go to landing_page
 $page_name = 'landing_page.php';
 ?>
-
 <!DOCTYPE html>
 <html>
 
@@ -34,7 +32,7 @@ $page_name = 'landing_page.php';
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
