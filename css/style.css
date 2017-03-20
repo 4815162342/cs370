@@ -1,165 +1,329 @@
 body{
+
 	background-position: center center;
+
 	background-repeat: no-repeat;
+
 	background-size: cover;
+
 	background-attachment: fixed;
+
 	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+
 }
+
+
 
 .navbar-static-top {
+
 	background-color: #003366;
+
 	height: 100px;
+
 	width: 100%;
+
 }
+
+
 
 .logo {
+
 	float: left;
+
 	margin-left: 10px;
+
 	margin-top: 10px;
+
 	height: 80px;
+
 	width: 80px;
+
 }
+
+
 
 .sitename {
+
 	font-family: Open Sans;
+
 	text-decoration: none;
+
 	color: white;
+
 	font-size: 1.9em;
+
 	float: left;
+
 	margin-top: 7px;
+
 	margin-left: 10px;
+
 	position: absolute;
+
 }
+
+
 
 .sitename:hover{
+
 	color: #666666;
+
 }
+
+
 
 .menubutton {
+
 	font-family: Open Sans;
+
 	float: right;
+
 	margin-top: 35px;
+
 	margin-right: 10px;
+
 	font-size: 1.2em;
+
 	color: white;
+
 	margin-top: 30px;
+
 }
+
+
 
 .btn-primary{
+
 	height: 37px !important;
+
 }
+
+
 
 .acctparagraph{
+
 	float: right;
+
 	margin-top: 30px;
+
 	margin-right: 5px;
+
 	position: right;
+
 }
+
+
 
 .accountbuttons {
+
 	float: right;
+
 	font-size: 1.2em;
+
 	color: white;
+
 	text-align: center;
+
 }
+
+
 
 .accountbuttons:hover {
+
 	font-weight: bold;
+
 }
+
+
 
 .red {
+
 	background-color: #A30000 !important;
+
 	font-family: Open Sans;
+
 	border-color: #A30000 !important;
+
 }
+
+
 
 .btn-default,
+
 .btn-default:hover,
+
 .btn-default:active,
+
 .btn-default:visited,
+
 .btn-default:focus {
+
 	background-color: #A30000 !important;
+
 	border-color: #A30000 !important;
+
 	color: white !important;
+
 }
 
+
+
 .homepagecontent {
+
 	width: 900px;
+
 	position: absolute;
+
 	top: 30%;
+
 	left: 50%;
+
 	margin-left: -450px;
+
 }
+
+
 
 .logopndesc {
 
+
+
 }
+
+
 
 .logocenter {
+
 	height: 80px;
+
 	width: 80px;
+
 	position: absolute;
+
 	left: 50%;
+
 	margin-left: -40px;
+
 	margin-top: -78px;
+
 }
+
+
 
 .pncenter {
+
 	text-align: center;
+
 	margin-top: 80px;
+
 	font-family: Open Sans;
+
 	text-decoration: none;
+
 	color: black;
+
 	font-size: 3em;
+
 	text-align: center;
+
   margin-bottom: 10px;
+
 }
+
+
 
 .desctext{
+
 	color: black;
+
 	text-align: center;
+
   font-size: 16px;
+
 }
+
+
 
 .form-control {
+
 	width: 250px !important;
+
 	height: 50px !important;
+
 	color: #B2B2B2 !important;
+
 	float: left;
+
 }
+
+
 
 .findbutton {
+
 	height: 50px;
+
 	width: 150px;
+
 }
+
+
 
 .findbutton:hover {
+
 	font-weight: bold;
+
 }
+
+
 
 .findtext {
+
 	font-family: Open Sans;
+
 	font-size: 1.7em;
+
 	color: white;
+
 	text-align: center;
+
 }
+
+
 
 .modal-dialog{
+
 	left: 5% !important;
+
 }
+
+
 
 #signupmodal{
+
 	height: 400px !important;
+
 }
+
+
 
 .modal-content{
+
 	width: 435px !important;
-}
-.modalinputs{
-	width: 350px !important;
-	margin-bottom: 10px;
+
 }
 
+.modalinputs{
+
+	width: 350px !important;
+
+	margin-bottom: 10px;
+
+}
+
+
+
 #loginmodal{
+
 	height: 200px !important;
+
 }
