@@ -65,8 +65,7 @@ $page_name = 'landing_page.php';
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-
-
+	<script src="javascript.js"></script>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 

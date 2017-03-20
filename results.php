@@ -26,7 +26,7 @@ include('lib/functions.php');
 
   <link rel="stylesheet" type="text/css" href="css/results.css" />
 
-
+  <script src="javascript.js"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
