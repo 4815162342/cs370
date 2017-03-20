@@ -98,7 +98,7 @@ function find() {
   var date = $("#date-input").val();
   var issue = $("#input-input").val();
 
-    window.location = "http://adam-sanders.com/results.php" + location + "/" + date + "/" + issue; // Redirecting to other page.
+    window.location = "http://adam-sanders.com/results.php?" + "location=" + location + "&" + "date=" + date + "&" + "issue=" + issue; // Redirecting to other page.
     return false;
   }
    // else {
@@ -108,7 +108,7 @@ function find() {
 
 
 function keyword_search() {
-   var a = document.getElementById('adv-search');
+   var a = document.getElementById('keyword-search-button');
     a.addEventListener('submit',function(e) {
         e.preventDefault();
         var b = document.getElementById('keyword-form').value;
@@ -116,6 +116,7 @@ function keyword_search() {
 
     });
 }
+keyword_search();
 
  function click_result() {
    var a = document.getElementById('protest-result');
