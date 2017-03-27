@@ -11,12 +11,12 @@ function login() {
 	$("#login-password").removeClass("input-error");
 
 	var input_error = false;
-
+	
 	if(!email){
 		$("#login-email").addClass("input-error");
 		input_error = true;
 	}
-
+	
 	if(!password){
 		$("#login-password").addClass("input-error");
 		input_error = true;
