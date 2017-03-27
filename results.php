@@ -101,7 +101,7 @@ include('lib/functions.php');
           <!-- Sort by button -->
           <div class="btn-group">
             <button type="button" class="btn red dropdown-toggle sortbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		Sort By <span class="caret"></span>
+		  Sort By <span class="caret"></span>
 						</button>
             <ul class="dropdown-menu sort-menu">
               <li><a href="#">Location</a></li>
@@ -138,9 +138,7 @@ include('lib/functions.php');
         </div>
       </div>
     </div>
-  </div>
-  </div>
-  </div>
+
 	<script>
 		var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
 		var dog;
