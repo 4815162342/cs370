@@ -20,8 +20,15 @@ if (!$page_name) {
 		$page_name = 'user.php';
 }
 
-// TODO: Check for event URL
+// Check for event URL
 if (!$page_name) {
+	$event_prep = $db->prepare("SELECT * FROM events WHERE URL = ?");
+	$event_prep->execute(array($request_uri));
+	$event = $event_prep->fetchObject();
+	
+	if ($event)
+		$page_name = 'event.php';
+
 }
 
 // If none of the others triggered, go to landing_page

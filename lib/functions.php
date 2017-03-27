@@ -13,6 +13,9 @@ function homePageFeeder() {
 	}
 }
 
-homePageFeeder();
+function uniqueViews($event_id) {
+	$event_id = intval($event_id);
+	return $db->query("SELECT UNIQUE(user_agent,IP) FROM events_views WHERE event_id = $event_id")->fetchColumn();
+}
 
 ?>
