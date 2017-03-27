@@ -15,16 +15,26 @@ if (!$page_name) {
 	$user_prep = $db->prepare("SELECT * FROM users WHERE username = ?");
 	$user_prep->execute(array($request_uri));
 	$user = $user_prep->fetchObject();
+	
+	if ($user)
+		$page_name = 'user.php';
 }
 
-// TODO: Check for event URL
+// Check for event URL
 if (!$page_name) {
+	$event_prep = $db->prepare("SELECT * FROM events WHERE URL = ?");
+	$event_prep->execute(array($request_uri));
+	$event = $event_prep->fetchObject();
+	
+	if ($event)
+		$page_name = 'event.php';
+
 }
 
 // If none of the others triggered, go to landing_page
-$page_name = 'landing_page.php';
+if (!$page_name)
+	header("LOCATION: /");
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
