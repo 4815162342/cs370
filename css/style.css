@@ -92,7 +92,7 @@ body{
 }
 
 .logopndesc {
-
+  font-style: italic;
 }
 
 .logocenter {
@@ -112,17 +112,20 @@ body{
 	color: black;
 	font-size: 3em;
 	text-align: center;
+  margin-bottom: 10px;
+  font-style: normal !important;
 }
 
 .desctext{
 	color: black;
-	text-align: left;
+	text-align: center;
+  font-size: 16px;
 }
 
 .form-control {
 	width: 250px !important;
 	height: 50px !important;
-	color: #B2B2B2 !important;
+	color: #000000 !important;
 	float: left;
 }
 
@@ -147,18 +150,18 @@ body{
 }
 
 #signupmodal{
-	height: 400px !important;
+  height: 100% !important;
 }
 
 .modal-content{
 	width: 435px !important;
 }
 
-#modalinputs{
+.modalinputs{
 	width: 400px !important;
 	margin-bottom: 10px;
 }
 
 #loginmodal{
-	height: 200px !important;
+	height: 100% !important;
 }

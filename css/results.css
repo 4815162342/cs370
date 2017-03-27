@@ -88,7 +88,7 @@ body {
 .form-control {
   width: 250px !important;
   height: 50px !important;
-  color: #B2B2B2 !important;
+  color: #000000 !important;
 }
 
 .modal-dialog {
@@ -103,7 +103,7 @@ body {
   width: 435px !important;
 }
 
-#modalinputs {
+.modalinputs {
   width: 400px !important;
   margin-bottom: 10px;
 }
@@ -142,8 +142,16 @@ body {
 }
 
 .dropdown-menu {
-  margin-top: -43px !important;
+  margin-top: 1px;
   margin-left: 5px !important;
+}
+
+.sort-menu{
+  margin-top: -42px !important;
+}
+
+.menu-dropdown{
+  margin-top: 43px !important;
 }
 
 .search-view-buttons {
