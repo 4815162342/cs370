@@ -33,7 +33,7 @@ if (!$page_name) {
 
 // If none of the others triggered, go to landing_page
 if (!$page_name)
-	$page_name = 'landing_page.php';
+	header("LOCATION: /");
 ?>
 <!DOCTYPE html>
 <html>
