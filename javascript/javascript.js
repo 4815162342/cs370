@@ -66,9 +66,14 @@ function createAccount(){
 		$("#signup-email").addClass("input-error");
 		input_error = true;
 	}
-
-	if(!password){
+	
+	if(!password1){
 		$("#signup-password").addClass("input-error");
+		input_error = true;
+	}
+	
+	if(password1 != password2){
+		$("#signup-password").addClass("signup-password2");
 		input_error = true;
 	}
 
