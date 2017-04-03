@@ -33,6 +33,7 @@ function login() {
 			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
 			$('#signupmodal').modal('hide');
+			updateViewAfterLogin();
 		}
 		else if(response.error){
 			$("#login-email").addClass("input-error");
@@ -90,12 +91,18 @@ function createAccount(){
 			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
 			$('#signupmodal').modal('hide');
+			updateViewAfterLogin();
 		}
 		else if(response.error){
 			$("#signup-email").addClass("input-error");
 		}
 	});
 
+}
+
+function updateViewAfterLogin() {
+	$("#loggedOutButtons").hide();
+	$("#loggedInButtons").show();
 }
 
 function find() {
