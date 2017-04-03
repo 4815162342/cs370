@@ -11,7 +11,6 @@
 						<li><a href="#">About Us</a></li>
 						<li><a href="#">Contact Us</a></li>
 						<li><a href="#">Help</a></li>
-						<li><a href="#">Settings</a></li>
 					</ul>
 				</div>
 			</div>
