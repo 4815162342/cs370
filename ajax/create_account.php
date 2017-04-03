@@ -33,9 +33,9 @@ if($email_check || $username_check){ // Account already exists
 	}
 }
 else { //Making a new account
-	$db->prepare("INSERT INTO users (email, pass, first_name, last_name, full, username) VALUES (?,?,?,?,?)")->execute(array($email, $hash,$first_name, $last_name, $full, $username));
+	$db->prepare("INSERT INTO users (email, pass, first_name, last_name, full, username) VALUES (?,?,?,?,?,?)")->execute(array($email, $hash,$first_name, $last_name, $full, $username));
 	$user_id = $db->lastInsertId();
-	$response['id'] = $user_id;
+	$response['user_id'] = $user_id;
 	$response['password'] = $hash;
 }
 
