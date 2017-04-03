@@ -13,9 +13,12 @@
 					</ul>
 				</div>
 			</div>
-			<p class="acctparagraph">
+			<p id="loggedOutButtons" class="acctparagraph">
 				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginmodal"><span class = "accountbuttons">Log In</span></button>
 				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#signupmodal"><span class = "accountbuttons">Sign Up</span></button>
 			</p>
+			<div id="loggedInButtons">
+				<button type="button" class="btn btn-default" data-toggle="modal" data-target="#createEvent"><span class = "accountbuttons">Create Event</span></button>
+			</div>
 		</div>
 	</nav>

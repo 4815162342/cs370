@@ -62,10 +62,6 @@ body{
 	text-align: center;
 }
 
-.accountbuttons:hover {
-	font-weight: bold;
-}
-
 .red {
 	background-color: #A30000 !important;
 	font-family: Open Sans;
