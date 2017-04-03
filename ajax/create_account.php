@@ -7,6 +7,8 @@ $first_name = $_POST['first_name'];
 $last_name = $_POST['last_name'];
 $username = $_POST['username'];
 
+$full = "$first_name $last_name";
+
 $hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
 $email_check = $db->prepare("SELECT id FROM users WHERE email = ?");
@@ -31,7 +33,7 @@ if($email_check || $username_check){ // Account already exists
 	}
 }
 else { //Making a new account
-	$db->prepare("INSERT INTO users (email, password, first_name, last_name, username) VALUES (?,?,?,?,?)")->execute(array($email, $hash,$first_name, $last_name, $username));
+	$db->prepare("INSERT INTO users (email, pass, first_name, last_name, full, username) VALUES (?,?,?,?,?)")->execute(array($email, $hash,$first_name, $last_name, $full, $username));
 	$user_id = $db->lastInsertId();
 	$response['id'] = $user_id;
 	$response['password'] = $hash;
