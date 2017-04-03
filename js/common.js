@@ -88,6 +88,7 @@ function createAccount(){
 		if(response.user_id || response.status=="logged_in"){
 			document.cookie = "11111="+response.user_id+"; expires=31 Dec 2018 12:00:00 UTC";
 			document.cookie = "22222="+response.password+"; expires=31 Dec 2018 12:00:00 UTC";
+			$('#signupmodal').modal('hide');
 		}
 		else if(response.error){
 			$("#signup-email").addClass("input-error");
