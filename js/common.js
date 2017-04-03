@@ -1,6 +1,4 @@
-console.log($.postJSON);
-//$.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
-console.log($.postJSON);
+$.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 
 function login() {
 	var email = $("#login-email").val();
@@ -52,7 +50,8 @@ function createAccount(){
 
 	$("#signup-username").removeClass("input-error");
 	$("#signup-email").removeClass("input-error");
-	$("#signup-password").removeClass("input-error");
+	$("#signup-password1").removeClass("input-error");
+	$("#signup-password2").removeClass("input-error");
 
 	var input_error = false;
 
@@ -72,7 +71,7 @@ function createAccount(){
 	}
 	
 	if(password1 != password2){
-		$("#signup-password2").addClass("signup-password2");
+		$("#signup-password2").addClass("input-error");
 		input_error = true;
 	}
 
