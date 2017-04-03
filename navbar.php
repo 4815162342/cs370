@@ -5,7 +5,7 @@
 			<div class="menubutton">
 				<div class="dropdown">
 					<button class="btn btn-primary dropdown-toggle red" type="button" data-toggle="dropdown">
-							<span class="glyphicon glyphicon-menu-down red"></span>
+							<span class="glyphicon glyphicon-menu-down"></span>
 						</button>
 					<ul class="dropdown-menu pull-right">
 						<li><a href="#">About Us</a></li>
