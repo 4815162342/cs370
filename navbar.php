@@ -8,7 +8,7 @@
 						<span class="glyphicon glyphicon-menu-down"></span>
 					</button>
 					<ul class="dropdown-menu pull-right">
-						<li><a href="#">About Us</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#aboutusmodal">About Us</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#signupmodal">Contact Us</a></li>
 					</ul>
 				</div>
