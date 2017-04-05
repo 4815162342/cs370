@@ -11,11 +11,11 @@
 			</div>
 		</div>
 		<input type="text" class="form-control" id="location-input" placeholder="City, State">
-		<input type="text" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
+		<input type="date" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
 		<input type="text" class="form-control" id="issue-input" placeholder="Issue or Topic">
 		<button type="button" class="btn btn-default findbutton" onclick="find()"><span class="findtext">Find</span></button>
 	</div>
 
 <script>
-	var popularNames=<?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
+	var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
 </script>
