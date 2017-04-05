@@ -92,23 +92,15 @@ include('lib/functions.php');
   <div class="container-fluid">
     <div class="row">
       <div class="col-mid-12">
-        <div class="input-group" id="adv-search">
-          <input type="text submit" class="form-control" id="keyword-form" placeholder="Search for Protests" />
+        <div class="input-group">
+          <!--<input type="text submit" class="form-control" id="keyword-form" placeholder="Search for Protests" />
           <div class="input-group-btn">
             <button type="button" class="btn btn-primary red searchiconspacing" id="keyword-search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-          </div>
-
-          <!-- Sort by button -->
-          <div class="btn-group">
-            <button type="button" class="btn red dropdown-toggle sortbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  Sort By <span class="caret"></span>
-						</button>
-            <ul class="dropdown-menu sort-menu">
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Date</a></li>
-              <li><a href="#">Issue</a></li>
-            </ul>
-          </div>
+          </div>-->
+          <input type="text" class="form-control" id="location-input" placeholder="City, State">
+		      <input type="text" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
+		      <input type="text" class="form-control" id="issue-input" placeholder="Issue or Topic">
+		      <button type="button" class="btn btn-default findbutton"><span class = "findtext">Find</span></button>
         </div>
       </div>
     </div>
