@@ -160,3 +160,44 @@ body{
 #loginmodal{
 	height: 100% !important;
 }
+
+.ul1{
+  list-style-type: none;
+}
+
+#aboutusintro{
+  font-family:Open Sans;
+  font-size: 1.2em;
+  color: black;
+}
+
+.meetteam{
+  font-family:Open Sans;
+  font-size: 1.2em;
+  color: black;
+}
+
+@media(max-width: 500px ){
+  .modal-content{
+    width: 300px !important;
+  }
+}
+
+.lefttext{
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+.dropdown{
+  margin: 0 0 0 5px;
+}
+
+.gray {
+  background-color: #cccccc !important;
+  color: black !important;
+  border: #cccccc !important;
+}
+
+.pullleft{
+  display: inline-block !important;
+}
