@@ -13,7 +13,7 @@
 		<input type="text" class="form-control" id="location-input" placeholder="City, State">
 		<input type="date" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
 		<input type="text" class="form-control" id="issue-input" placeholder="Issue or Topic">
-		<button type="button" class="btn btn-default findbutton" onclick="keyword_search()"><span class="findtext">Find</span></button>
+		<button type="button" class="btn btn-default findbutton" onclick="find()"><span class="findtext">Find</span></button>
 	</div>
 
 <script>

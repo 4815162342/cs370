@@ -65,19 +65,19 @@ function createAccount(){
 		$("#signup-email").addClass("input-error");
 		input_error = true;
 	}
-	
+
 	if(!password1){
 		$("#signup-password1").addClass("input-error");
 		input_error = true;
 	}
-	
+
 	if(password1 != password2){
 		$("#signup-password2").addClass("input-error");
 		input_error = true;
 	}
 
 	if(input_error) return;
-	
+
 	var ajaxParams = {
 		first_name:	first_name,
 		last_name:	last_name,
@@ -112,11 +112,6 @@ function find() {
 
 	window.location = "/results.php?location=" + location + "&" + "date=" + date + "&" + "issue=" + issue; // Redirecting to other page.
 	return false;
-}
-
-function keyword_search() {
-	var b = document.getElementById('keyword-form').value;
-	window.location.href = 'http://adam-sanders.com/results.php'+b;
 }
 
  function click_result() {
