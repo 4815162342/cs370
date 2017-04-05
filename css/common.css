@@ -1,0 +1,234 @@
+body{
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+}
+
+.navbar-default {
+  background-color: #003366 !important;
+  height: 100px;
+  width: 100%;
+  border-bottom: 0px !important;
+}
+
+.navbar-toggle{
+  margin: 30px 5px 0 0 !important;
+}
+
+.logo {
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 80px;
+  width: 80px;
+}
+
+.navbar-brand{
+  font-family: Open Sans !important;
+  color: white !important;
+  font-size: 4.2vw !important;
+  margin: 23px 0 0 0 !important;
+  position: fixed;
+}
+
+.navbar-brand:hover{
+  color: #666666 !important;
+}
+
+@media (max-width: 930px){
+  .navbar-brand{
+    font-size: 32px !important;
+  }
+}
+
+.btn-primary{
+  height: 37px !important;
+}
+
+.navbar-collapse{
+  margin-top: 30px;
+}
+
+.buttonright{
+  float: right;
+  margin-right: 5px;
+  position: right;
+}
+
+.accountbuttons {
+  font-family:Open Sans;
+  float: right;
+  font-size: 1.2em;
+  color: white;
+  text-align: center;
+}
+
+.accountbuttons:hover {
+  font-weight: bold;
+}
+
+.red {
+  background-color: #A30000 !important;
+  font-family: Open Sans;
+  border-color: #A30000 !important;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:active,
+.btn-default:visited,
+.btn-default:focus {
+	background-color: #A30000 !important;
+	border-color: #A30000 !important;
+	color: white !important;
+}
+
+.homepagecontent {
+	width: 900px;
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	margin-left: -450px;
+}
+
+.logopndesc {
+  font-style: italic;
+}
+
+.logocenter {
+	height: 80px;
+	width: 80px;
+	position: absolute;
+	left: 50%;
+	margin-left: -40px;
+	margin-top: -78px;
+}
+
+.pncenter {
+	text-align: center;
+	margin-top: 80px;
+	font-family: Open Sans;
+	text-decoration: none;
+	color: black;
+	font-size: 3em;
+	text-align: center;
+  margin-bottom: 10px;
+  font-style: normal !important;
+}
+
+.desctext{
+	color: black;
+	text-align: center;
+  font-size: 16px;
+}
+
+.form-control {
+	width: 250px !important;
+	height: 50px !important;
+	color: #000000 !important;
+	float: left;
+}
+
+.findbutton {
+	height: 50px;
+	width: 150px;
+}
+
+.findbutton:hover {
+	font-weight: bold;
+}
+
+.findtext {
+	font-family: Open Sans;
+	font-size: 1.7em;
+	color: white;
+	text-align: center;
+}
+
+.modal-title{
+  text-align: left !important;
+}
+
+.modal-dialog{
+  position: absolute;
+  overflow-y: initial !important;
+  left: 5% !important;
+   top: 15%;
+   margin-top: -100px;
+}
+
+.modal-body{
+  height: 220px;
+  overflow-y: auto;
+}
+
+
+#signupmodal{
+  overflow-y: scroll !important;
+}
+
+.modal-content{
+  width: 435px !important;
+}
+
+.modalinputs{
+  width: 400px !important;
+  margin-bottom: 10px;
+}
+
+
+@media(max-width: 500px ){
+  .modal-content{
+    width: 300px !important;
+  }1
+  
+  .modalinputs{
+    width: 265px !important;
+  }
+  
+}
+
+.input-error{border-color:#d50032;}
+
+.ul1{
+  list-style-type: none;
+}
+
+#aboutusintro{
+  font-family:Open Sans;
+  font-size: 1.2em;
+  color: black;
+}
+
+.meetteam{
+  font-family:Open Sans;
+  font-size: 1.2em;
+  color: black;
+}
+
+@media(max-width: 500px ){
+  .modal-content{
+    width: 300px !important;
+  }
+}
+
+.lefttext{
+  float: left;
+  margin: 10px 0 0 0;
+}
+
+.dropdown{
+  margin: 0 0 0 5px;
+}
+
+.gray {
+  background-color: #cccccc !important;
+  color: black !important;
+  border: #cccccc !important;
+}
+
+.pullleft{
+  display: inline-block !important;
+}
