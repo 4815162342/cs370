@@ -17,7 +17,6 @@ body{
 	margin-left: 10px;
 	margin-top: 10px;
 	height: 80px;
-	width: 80px;
 }
 
 .sitename {
@@ -61,10 +60,6 @@ body{
 	font-size: 1.2em;
 	color: white;
 	text-align: center;
-}
-
-.accountbuttons:hover {
-	font-weight: bold;
 }
 
 .red {
