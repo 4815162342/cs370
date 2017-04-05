@@ -1,16 +1,11 @@
 body{
-
+    font-style: italic;
 	background-position: center center;
-
 	background-repeat: no-repeat;
-
 	background-size: cover;
-
 	background-attachment: fixed;
-
 	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
-<<<<<<< HEAD
-    padding-top: 100px;
+  padding-top: 100px;
 }
 
 .navbar-default {
@@ -18,27 +13,13 @@ body{
   height: 100px;
   width: 100%;
   border-bottom: 0px !important;
-=======
-
 }
 
-
-
-.navbar-static-top {
-
-	background-color: #003366;
-
-	height: 100px;
-
-	width: 100%;
-
->>>>>>> refs/remotes/origin/master
+.navbar-toggle{
+  margin: 30px 5px 0 0 !important;
 }
-
-
 
 .logo {
-<<<<<<< HEAD
   float: left;
   margin-left: 10px;
   margin-top: 10px;
@@ -49,13 +30,19 @@ body{
 .navbar-brand{
   font-family: Open Sans !important;
   color: white !important;
-  font-size: 3.8em !important;
-  margin-top: 23px !important;
+  font-size: 4.2vw !important;
+  margin: 23px 0 0 0 !important;
   position: fixed;
 }
 
 .navbar-brand:hover{
   color: #666666 !important;
+}
+
+@media (max-width: 930px){
+  .navbar-brand{
+    font-size: 32px !important;
+  }
 }
 
 .btn-primary{
@@ -64,398 +51,122 @@ body{
 
 .navbar-collapse{
   margin-top: 30px;
-  position: relative;
 }
 
 .buttonright{
   float: right;
   margin-right: 5px;
   position: right;
-=======
-
-	float: left;
-
-	margin-left: 10px;
-
-	margin-top: 10px;
-
-	height: 80px;
-
-	width: 80px;
-
 }
-
-
-
-.sitename {
-
-	font-family: Open Sans;
-
-	text-decoration: none;
-
-	color: white;
-
-	font-size: 1.9em;
-
-	float: left;
-
-	margin-top: 7px;
-
-	margin-left: 10px;
-
-	position: absolute;
-
-}
-
-
-
-.sitename:hover{
-
-	color: #666666;
-
-}
-
-
-
-.menubutton {
-
-	font-family: Open Sans;
-
-	float: right;
-
-	margin-top: 35px;
-
-	margin-right: 10px;
-
-	font-size: 1.2em;
-
-	color: white;
-
-	margin-top: 30px;
-
-}
-
-
-
-.btn-primary{
-
-	height: 37px !important;
-
-}
-
-
-
-.acctparagraph{
-
-	float: right;
-
-	margin-top: 30px;
-
-	margin-right: 5px;
-
-	position: right;
-
->>>>>>> refs/remotes/origin/master
-}
-
-
 
 .accountbuttons {
-<<<<<<< HEAD
   font-family:Open Sans;
   float: right;
   font-size: 1.2em;
   color: white;
   text-align: center;
-=======
-
-	float: right;
-
-	font-size: 1.2em;
-
-	color: white;
-
-	text-align: center;
-
->>>>>>> refs/remotes/origin/master
 }
-
-
 
 .accountbuttons:hover {
-<<<<<<< HEAD
   font-weight: bold;
-=======
-
-	font-weight: bold;
-
->>>>>>> refs/remotes/origin/master
 }
-
 
 
 .red {
-<<<<<<< HEAD
   background-color: #A30000 !important;
   font-family: Open Sans;
   border-color: #A30000 !important;
-=======
-
-	background-color: #A30000 !important;
-
-	font-family: Open Sans;
-
-	border-color: #A30000 !important;
-
->>>>>>> refs/remotes/origin/master
 }
 
-
-
 .btn-default,
-
 .btn-default:hover,
-
 .btn-default:active,
-
 .btn-default:visited,
-
 .btn-default:focus {
-<<<<<<< HEAD
   background-color: #A30000 !important;
   border-color: #A30000 !important;
   color: white !important;
 }
 
 .productimage{
-  margin-bottom: 100px;
-  margin-left: 45%;
-  position: relative;
-}
-
-h1, h4{
-  font-family: Open Sans !important;
-  color: black !important;
-  text-align: center !important;
-}
-
-p{
-  font-family: Open Sans;
-=======
-
-	background-color: #A30000 !important;
-
-	border-color: #A30000 !important;
-
-	color: white !important;
-
-}
-
-
-
-.homepagecontent {
-
-	width: 900px;
-
-	position: absolute;
-
-	top: 30%;
-
-	left: 50%;
-
-	margin-left: -450px;
-
-}
-
-
-
-.logopndesc {
-
-
-
-}
-
-
-
-.logocenter {
-
 	height: 80px;
-
 	width: 80px;
-
 	position: absolute;
-
 	left: 50%;
-
-	margin-left: -40px;
-
-	margin-top: -78px;
-
+  margin: 10px 0 0 -40px;
 }
-
-
-
-.pncenter {
-
-	text-align: center;
-
-	margin-top: 80px;
-
-	font-family: Open Sans;
-
-	text-decoration: none;
-
-	color: black;
-
-	font-size: 3em;
-
-	text-align: center;
-
-  margin-bottom: 10px;
-
-}
-
-
-
-.desctext{
-
-	color: black;
-
-	text-align: center;
-
-  font-size: 16px;
-
->>>>>>> refs/remotes/origin/master
-}
-
-
 
 .form-control {
-<<<<<<< HEAD
   width: 250px !important;
   height: 50px !important;
   color: #000000 !important;
   float: left;
   border-radius: 5px !important;
-=======
-
-	width: 250px !important;
-
-	height: 50px !important;
-
-	color: #B2B2B2 !important;
-
-	float: left;
-
->>>>>>> refs/remotes/origin/master
 }
-
-
 
 .findbutton {
-<<<<<<< HEAD
   height: 50px;
-  width: 150px;
-=======
-
-	height: 50px;
-
-	width: 150px;
-
->>>>>>> refs/remotes/origin/master
+  width: 130px;
+  
 }
-
-
 
 .findbutton:hover {
-<<<<<<< HEAD
   font-weight: bold;
-=======
-
-	font-weight: bold;
-
->>>>>>> refs/remotes/origin/master
 }
 
-
-
 .findtext {
-<<<<<<< HEAD
   font-family: Open Sans;
   font-size: 1.7em;
   color: white;
   text-align: center;
-=======
-
-	font-family: Open Sans;
-
-	font-size: 1.7em;
-
-	color: white;
-
-	text-align: center;
-
->>>>>>> refs/remotes/origin/master
 }
 
-
+.modal-title{
+  text-align: left !important;
+}
 
 .modal-dialog{
-<<<<<<< HEAD
+  position: absolute;
+  overflow-y: initial !important;
   left: 5% !important;
-=======
-
-	left: 5% !important;
-
->>>>>>> refs/remotes/origin/master
+   top: 15%;
+   margin-top: -100px;
 }
 
+.modal-body{
+  height: 220px;
+  overflow-y: auto;
+}
 
 
 #signupmodal{
-<<<<<<< HEAD
-  height: 100% !important;
-=======
-
-	height: 400px !important;
-
->>>>>>> refs/remotes/origin/master
+  overflow-y: scroll !important;
 }
 
-
-
 .modal-content{
-<<<<<<< HEAD
   width: 435px !important;
 }
 
-#modalinputs{
+.modalinputs{
   width: 400px !important;
   margin-bottom: 10px;
-=======
-
-	width: 435px !important;
-
-}
-
-.modalinputs{
-
-	width: 350px !important;
-
-	margin-bottom: 10px;
-
->>>>>>> refs/remotes/origin/master
 }
 
 
+@media(max-width: 500px ){
+  .modal-content{
+    width: 300px !important;
+  }1
+  
+  .modalinputs{
+    width: 265px !important;
+  }
+  
+}
 
 #loginmodal{
-<<<<<<< HEAD
-  height: 100% !important;
 }
-=======
 
-	height: 200px !important;
-
+#modal2{
 }
->>>>>>> refs/remotes/origin/master
+
