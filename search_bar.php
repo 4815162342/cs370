@@ -1,4 +1,4 @@
-<select class="form-control">
+<select id="location-input" class="form-control">
 	<option disabled selected>Select City</option>
 	<?php
 		$qry = $db->query("SELECT city FROM locations");
