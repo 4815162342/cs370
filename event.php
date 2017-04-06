@@ -4,27 +4,14 @@ $db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(
 $unique_views = uniqueViews($event->id);
 ?>
 
-<!DOCTYPE html>
-<html>
-
-<head>
-  <base target="_top">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-</head>
-
-<body>
-	<?php
+<?php
   	include('navbar.php');
   	include($page_name);
   	include('modals/login.html');
   	include('modals/signup.html');
   	include('modals/about-us.html');
   	include('modals/contact-us.html');
-  ?>
+?>
 
   <div class="maincont1">
     <div class="maincontimg">
@@ -76,8 +63,7 @@ $unique_views = uniqueViews($event->id);
       </div>
     </div>
   </div>
-</body>
-</html>
+
 
 <!--<div id="user_wrapper">
 		<div class="col-md-12">
