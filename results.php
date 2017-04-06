@@ -50,8 +50,8 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 </head>
 
 <body>
+	<?php include('navbar.php'); ?>
 	<div class="container">
-		<?php include('navbar.php'); ?>
 	
 		<div class="row">
 			<?php include('search_bar.php'); ?>
