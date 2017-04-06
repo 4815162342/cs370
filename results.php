@@ -1,6 +1,22 @@
 <?php
 include('../db.php');
 include('lib/functions.php');
+
+$query = [];
+
+foreach ($_GET as $key => $value) {
+	switch ($key) {
+		case 'location':
+		case 'date':
+		case 'issue':
+			$query[$key] = $value;
+			break;
+		default:
+			// TODO: make a random, interesting query
+			break;
+	}
+}
+
 ?>
 
 <!DOCTYPE html>
