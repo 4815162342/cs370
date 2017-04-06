@@ -94,8 +94,8 @@ body{
 	height: 80px;
 	width: 80px;
 	position: absolute;
-	left: 50%;
-	margin-left: -40px;
+	left: 42%;
+	bottom: 73%;
 	margin-top: -78px;
 }
 
@@ -118,7 +118,7 @@ body{
 }
 
 .form-control {
-	width: 250px !important;
+	//width: 250px !important;
 	height: 50px !important;
 	color: #000000 !important;
 	float: left;
