@@ -10,14 +10,15 @@ include('lib/functions.php');
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
   <link rel="stylesheet" type="text/css" href="/css/common.css">
-  <link rel="stylesheet" type="text/css" href="css/results.css" />
+  <link rel="stylesheet" type="text/css" href="/css/results.css" />
   <script src="/js/common.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-static-top">
+  <?php include('/event.php'); ?>
+<!--  <nav class="navbar navbar-static-top">
     <div class="logoimg">
       <a href="/"><img class="logo" src="img/logo.png"></a>
       <a href="/" class="sitename"><span class = "sitename">FindMyProtest</span></a>
@@ -39,7 +40,7 @@ include('lib/functions.php');
         <button type="button" class="btn btn-default" data-toggle="modal" data-target="#signupmodal"><span class = "accountbuttons">Sign Up</span></button>
       </p>
     </div>
-  </nav>
+  </nav>-->
 
   <!-- Sign up Modal -->
 	<div id="signupmodal" class="modal fade" role="dialog">
