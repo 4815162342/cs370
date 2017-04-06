@@ -118,7 +118,7 @@ body{
 }
 
 .form-control {
-	//width: 250px !important;
+	width: 250px !important;
 	height: 50px !important;
 	color: #000000 !important;
 	float: left;
