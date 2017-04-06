@@ -41,64 +41,19 @@ include('lib/functions.php');
       </p>
     </div>
   </nav>-->
+  <?php
+  	include('navbar.php');
+  	include($page_name);
+  	include('modals/login.html');
+  	include('modals/signup.html');
+  	include('modals/about-us.html');
+  	include('modals/contact-us.html');
+  ?>
 
-  <!-- Sign up Modal -->
-	<div id="signupmodal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Sign up Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Sign Up</h4>
-				</div>
-				<div class="modal-body" id="signupmodal">
-					<p>First Name:</p>
-					<input type="text" class="form-control modalinputs" id="firstname" placeholder="Enter your first name">
-					<p>Last Name:</p>
-					<input type="text" class="form-control modalinputs" id="lastname" placeholder="Enter your last name">
-					<p>Username:</p>
-					<input type="text" class="form-control modalinputs" id="signup-username" placeholder="Enter a new username">
-					<p>Email:</p>
-					<input type="text" class="form-control modalinputs" id="signup-email" placeholder="Enter your email">
-					<p>Password:</p>
-					<input type="text" class="form-control modalinputs" id="signup-password" placeholder="Enter your password">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" id="signup-modal-submit" data-dismiss="modal" onclick="createAccount()">Sign Up</button>
-				</div>
-			</div>
-		</div>
-	</div>
-
-  <!-- Log In Modal -->
-	<div id="loginmodal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Log In Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Log In</h4>
-				</div>
-				<div class="modal-body" id="modal2">
-					<p>Email:</p>
-					<input type="text" class="form-control modalinputs" id="login-email" placeholder="Enter your email">
-					<p>Password:</p>
-					<input type="text" class="form-control modalinputs" id="login-password" placeholder="Enter password here">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal" onclick="login()">Log In</button>
-				</div>
-			</div>
-		</div>
-	</div>
   <div class="container-fluid">
     <div class="row">
       <div class="col-mid-12">
         <div class="input-group">
-          <!--<input type="text submit" class="form-control" id="keyword-form" placeholder="Search for Protests" />
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-primary red searchiconspacing" id="keyword-search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-          </div>-->
           <input type="text" class="form-control" id="location-input" placeholder="City, State">
 		      <input type="text" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
 		      <input type="text" class="form-control" id="issue-input" placeholder="Issue or Topic">
@@ -113,7 +68,7 @@ include('lib/functions.php');
           <div class="thumbnail">
             <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
             <div class="caption">
-              <h2 class="group inner list-group-item-heading" id="protest-result"><a href id="protest-detail-link">
+              <h2 class="group inner list-group-item-heading" id="protest-result"><a href id="protest-detail-link" onclick="click_result()">
                 [PROTEST TITLE]</a></h2>
               <p class="group inner list-group-item-text">
                 MM/DD/YYYY</p>
