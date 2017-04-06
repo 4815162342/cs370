@@ -1,7 +1,23 @@
 <?php
 include('../db.php');
 include('lib/functions.php');
+
+$query = [];
+
+foreach ($_GET as $key => $value) {
+	switch ($key) {
+		case 'location':
+		case 'date':
+		case 'issue':
+			$query[$key] = $value;
+			break;
+		default:
+			// TODO: make a random, interesting query
+			break;
+	}
+}
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -17,7 +33,6 @@ include('lib/functions.php');
 </head>
 
 <body>
-  <?php include('/event.php'); ?>
 <!--  <nav class="navbar navbar-static-top">
     <div class="logoimg">
       <a href="/"><img class="logo" src="img/logo.png"></a>
@@ -52,14 +67,9 @@ include('lib/functions.php');
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-mid-12">
-        <div class="input-group">
-          <input type="text" class="form-control" id="location-input" placeholder="City, State">
-		      <input type="text" class="form-control" id="date-input" placeholder="MM/DD/YYYY">
-		      <input type="text" class="form-control" id="issue-input" placeholder="Issue or Topic">
-		      <button type="button" class="btn btn-default findbutton"><span class = "findtext">Find</span></button>
-        </div>
-      </div>
+      <?php
+       include('search_bar.php');
+      ?>
     </div>
 
     <div class="container">
@@ -87,11 +97,11 @@ include('lib/functions.php');
         </div>
       </div>
     </div>
-
+	
 	<script>
 		var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
 		var dog;
 		console.log("testing");
 	</script>
-</body>
+ </body>
 </html>
