@@ -8,19 +8,19 @@ $query_array = [];
 foreach ($_GET as $key => $value) {
 	switch ($key) {
 		case 'location':
-			$query_stirng += 'AND city = ? ';
+			$query_stirng .= 'AND city = ? ';
 			$query_array[] = $value;
 			break;
 			
 		case 'date':
-			$query_stirng += 'AND date BETWEEN ? AND ? ';
+			$query_stirng .= 'AND date BETWEEN ? AND ? ';
 			$timestamp = strtotime($query['date']);
 			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
 			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
 			break;
 		
 		case 'issue':
-			$query_stirng += 'AND topic_ids LIKE ? ';
+			$query_stirng .= 'AND topic_ids LIKE ? ';
 			$query_array[] = "%$value%";
 			break;
 		
@@ -29,6 +29,9 @@ foreach ($_GET as $key => $value) {
 			break;
 	}
 }
+
+var_dump($query_stirng);
+var_dump($query_array);
 
 $result_prep = $db->prepare($query_stirng);
 $result_prep->execute($query_array);
