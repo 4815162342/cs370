@@ -6,6 +6,12 @@ body{
 	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
 }
 
+@media (min-width:639px) {
+	body {
+		padding: 0 20px;
+	}
+}
+
 .navbar-static-top {
 	background-color: #003366;
 	height: 100px;
@@ -94,8 +100,8 @@ body{
 	height: 80px;
 	width: 80px;
 	position: absolute;
-	left: 50%;
-	margin-left: -40px;
+	left: 42%;
+	bottom: 73%;
 	margin-top: -78px;
 }
 
