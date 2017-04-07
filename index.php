@@ -54,7 +54,6 @@ if (!$page_name)
 	include($page_name);
 	include('modals/login.html');
 	include('modals/signup.html');
-	include('modals/login.html');
 	include('modals/about-us.html');
 	include('modals/contact-us.html');
 	?>
