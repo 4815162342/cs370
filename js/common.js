@@ -120,7 +120,8 @@ function find() {
 	window.location = queryString;
 }
 
- function click_result() {
+/*
+function click_result() {
 	 var a = document.getElementById('protest-result');
 		a.addEventListener('submit',function(e) {
 				e.preventDefault();
@@ -129,3 +130,4 @@ function find() {
 
 		});
 }
+*/
