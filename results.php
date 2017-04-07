@@ -30,9 +30,6 @@ foreach ($_GET as $key => $value) {
 	}
 }
 
-var_dump($query_stirng);
-var_dump($query_array);
-
 $result_prep = $db->prepare($query_stirng);
 $result_prep->execute($query_array);
 $results = $result_prep->fetchAll(PDO::FETCH_OBJ);

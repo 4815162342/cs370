@@ -7,7 +7,7 @@ body{
 }
 
 @media (min-width:639px) {
-	body {
+	.container {
 		padding: 0 20px;
 	}
 }
