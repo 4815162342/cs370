@@ -52,6 +52,7 @@ if (!$page_name)
 	<?php
 	include('navbar.php');
 	include($page_name);
+	include('modals/login.html');
 	include('modals/signup.html');
 	include('modals/login.html');
 	include('modals/about-us.html');
