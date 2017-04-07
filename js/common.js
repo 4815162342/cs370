@@ -28,7 +28,7 @@ function login() {
 		email=email.slice(0,email_check);
 	}
 
-	$.getJSON("ajax/login.php",{email:email,password:password},function(response){
+	$.postJSON("ajax/login.php",{email:email,password:password},function(response){
 		if(response.user_id || response.status=="logged_in"){
 			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
@@ -107,13 +107,13 @@ function updateViewAfterLogin() {
 
 function find() {
 	var queryString = '/results.php?';
-	
+
 	var location = $("#location-input").val();
 	if (location) queryString += `location=${location}`;
-	
+
 	var date = $("#date-input").val();
 	if (date) queryString += `date=${date}`;
-	
+
 	var issue = $("#input-input").val();
 	if (issue) queryString += `issue=${issue}`;
 
