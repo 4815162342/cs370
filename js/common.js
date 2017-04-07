@@ -106,12 +106,18 @@ function updateViewAfterLogin() {
 }
 
 function find() {
+	var queryString = '/results.php?';
+	
 	var location = $("#location-input").val();
+	if (location) queryString += `location=${location}`;
+	
 	var date = $("#date-input").val();
+	if (date) queryString += `date=${date}`;
+	
 	var issue = $("#input-input").val();
+	if (issue) queryString += `issue=${issue}`;
 
-	window.location = "/results.php?location=" + location + "&" + "date=" + date + "&" + "issue=" + issue; // Redirecting to other page.
-	return false;
+	window.location = queryString;
 }
 
  function click_result() {
