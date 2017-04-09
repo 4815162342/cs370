@@ -1,6 +1,6 @@
 <nav class="navbar navbar-static-top">
 	<div class="logoimg">
-		<a href="/"><img class="logo" src="/img/logo.png"></a>
+		<a href="/"><img id="logo" src="/img/logo.png"></a>
 		<a href="/" class="sitename"><span class = "sitename">FindMyProtest</span></a>
 		<div class="menubutton">
 			<div class="dropdown">

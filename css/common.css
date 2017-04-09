@@ -18,10 +18,7 @@ body{
 	width: 100%;
 }
 
-.logo {
-	float: left;
-	margin-left: 10px;
-	margin-top: 10px;
+#logo {
 	height: 80px;
 }
 
