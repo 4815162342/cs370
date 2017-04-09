@@ -1,8 +1,10 @@
 $.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 
 function login() {
-	var email = $("#login-email").val();
-	var password = $("#login-password").val();
+	//var email = $("#login-email").val();
+	//var password = $("#login-password").val();
+	var email = document.getElementById('login-email').value;
+	var password1 = document.getElementById('login-password').value;
 
 	$("#login-email").removeClass("input-error");
 	$("#login-password").removeClass("input-error");
@@ -28,11 +30,11 @@ function login() {
 		email=email.slice(0,email_check);
 	}
 
-	$.getJSON("ajax/login.php",{email:email,password:password},function(response){
+	$.postJSON("ajax/log_in.php",{email:email,password:password},function(response){
 		if(response.user_id || response.status=="logged_in"){
 			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
-			$('#signupmodal').modal('hide');
+			$('#loginmodal').modal('hide');
 			updateViewAfterLogin();
 		}
 		else if(response.error){
@@ -107,7 +109,7 @@ function updateViewAfterLogin() {
 
 function find() {
 	var queryString = '/results.php?';
-	
+
 	var location = $("#location-input").val();
 	if (location) queryString += `location=${location}&`;
 	
