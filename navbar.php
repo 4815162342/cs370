@@ -1,26 +1,35 @@
-<nav class="navbar navbar-static-top">
-	<div class="logoimg">
-		<a href="/"><img class="logo" src="/img/logo.png"></a>
-		<a href="/" class="sitename"><span class = "sitename">FindMyProtest</span></a>
-		<div class="menubutton">
-			<div class="dropdown">
-				<button class="btn btn-primary dropdown-toggle red" type="button" data-toggle="dropdown">
-					<span class="glyphicon glyphicon-menu-down"></span>
-				</button>
-				<ul class="dropdown-menu pull-right">
-					<li><a href="#" data-toggle="modal" data-target="#aboutusmodal">About Us</a></li>
-					<li><a href="#" data-toggle="modal" data-target="#contactusmodal">Contact Us</a></li>
-				</ul>
-			</div>
+<nav class="navbar navbar-default">
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Brand</a>
 		</div>
-		<p id="loggedOutButtons" class="acctparagraph">
-			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginmodal"><span class = "accountbuttons">Log In</span></button>
-			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#signupmodal"><span class = "accountbuttons">Sign Up</span></button>
-		</p>
-<!--
-		<div id="loggedInButtons">
-			<button type="button" class="btn btn-default" data-toggle="modal" data-target="#createEvent"><span class = "accountbuttons">Create Event</span></button>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="#">Link</a></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Another action</a></li>
+						<li><a href="#">Something else here</a></li>
+						<li role="separator" class="divider"></li>
+						<li><a href="#">Separated link</a></li>
+					</ul>
+				</li>
+			</ul>
 		</div>
--->
 	</div>
 </nav>

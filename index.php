@@ -49,13 +49,15 @@ if (!$page_name)
 </head>
 
 <body>
-	<?php
-	include('navbar.php');
-	include($page_name);
-	include('modals/login.html');
-	include('modals/signup.html');
-	include('modals/about-us.html');
-	include('modals/contact-us.html');
-	?>
+	<?php include('navbar.php'); ?>
+	<div class="container">
+		<?php
+		include($page_name);
+		include('modals/login.html');
+		include('modals/signup.html');
+		include('modals/about-us.html');
+		include('modals/contact-us.html');
+		?>
+	</div>
 </body>
 </html>
