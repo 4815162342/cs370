@@ -111,18 +111,19 @@ function find() {
 	var queryString = '/results.php?';
 
 	var location = $("#location-input").val();
-	if (location) queryString += `location=${location}`;
-
+	if (location) queryString += `location=${location}&`;
+	
 	var date = $("#date-input").val();
-	if (date) queryString += `date=${date}`;
-
+	if (date) queryString += `date=${date}&`;
+	
 	var issue = $("#input-input").val();
-	if (issue) queryString += `issue=${issue}`;
+	if (issue) queryString += `issue=${issue}&`;
 
 	window.location = queryString;
 }
 
- function click_result() {
+/*
+function click_result() {
 	 var a = document.getElementById('protest-result');
 		a.addEventListener('submit',function(e) {
 				e.preventDefault();
@@ -131,3 +132,4 @@ function find() {
 
 		});
 }
+*/
