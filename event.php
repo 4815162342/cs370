@@ -30,7 +30,7 @@ $unique_views = uniqueViews($event->id);
 				<span class="protname"><?=$event->name ?></span>
 				<button type="button" class="btn btn-default btn-lg btposition">
 	<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
-					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true"></span>
+					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" onclick="click_result()"></span>
 </button>
 			</div>
 			<div class="issue">
