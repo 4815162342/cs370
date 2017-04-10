@@ -15,6 +15,7 @@ body{
 .navbar {
 	background-color: #003366;
 	color: white;
+	border: none;
 }
 
 #logo {
