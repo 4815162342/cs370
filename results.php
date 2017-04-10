@@ -11,19 +11,19 @@ foreach ($_GET as $key => $value) {
 			$query_stirng .= 'AND city = ? ';
 			$query_array[] = $value;
 			break;
-			
+
 		case 'date':
 			$query_stirng .= 'AND date BETWEEN (? AND ?) ';
 			$timestamp = strtotime($value);
 			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
 			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
 			break;
-		
+
 		case 'issue':
 			$query_stirng .= 'AND topic_ids LIKE ? ';
 			$query_array[] = "%$value%";
 			break;
-		
+
 		default:
 			// TODO: make a random, interesting query
 			break;
@@ -56,11 +56,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 <body>
 	<?php include('navbar.php'); ?>
 	<div class="container">
-	
+
 		<div class="row">
 			<?php include('search_bar.php'); ?>
 		</div>
-		
+
 		<?php
 			foreach ($results as $event) { ?>
 				<div id="products" class="row list-group">
@@ -78,7 +78,8 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 										<p class="lead"><?=$event->issue_string?></p>
 									</div>
 									<div class="col-xs-12 col-md-6">
-										<a class="btn btn-success red add-button" href="http://www.jquery2dotnet.com">Add to Library</a>
+										<!--<a class="btn btn-success red add-button" href="http://www.jquery2dotnet.com">Add to Library</a>-->
+										<button class="btn btn-default red add-button" onclick="click_result()" type="button"><span class="add-button">Add to Library</span></button>
 									</div>
 								</div>
 							</div>
@@ -86,7 +87,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 					</div>
 				</div>
 			<?php }
-		
+
 		include('modals/signup.html');
 		include('modals/login.html');
 		include('modals/about-us.html');

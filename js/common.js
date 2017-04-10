@@ -123,11 +123,13 @@ function find() {
 }
 
  function click_result() {
-	 var a = document.getElementById('protest-result');
+	 /*var a = document.getElementById('protest-result');
 		a.addEventListener('submit',function(e) {
 				e.preventDefault();
 				var b = document.getElementById('protest-detail-link').value;
 				window.location.href = 'http://adam-sanders.com/protest.php'+b;
+		});*/
 
-		});
+		var queryString = '/event.php?';
+		window.location = queryString;
 }
