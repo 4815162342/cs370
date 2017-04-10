@@ -108,7 +108,7 @@ function updateViewAfterLogin() {
 }
 
 function find() {
-	var queryString = '/results.php?';
+	var queryString = '/results?';
 
 	var location = $("#location-input").val();
 	if (location) queryString += `location=${location}&`;
