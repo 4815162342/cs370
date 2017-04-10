@@ -1,0 +1,51 @@
+<!--create event modal-->
+<div id="createeventmodal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <!-- Create Event Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Create a New Event</h4>
+      </div>
+      <div class="modal-body" id="createeventmodal">
+        <div class="issue">
+          <span class="lefttext">Issue: &nbsp</span>
+          <div class="dropdown pullleft">
+            <button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">Issue
+              <span class="caret"></span></button>
+              <ul class="dropdown-menu">
+                <li><a href="#">Abuse</a></li>
+                <li><a href="#">Politics</a></li>
+                <li><a href="#">Economy</a></li>
+              </ul>
+            </div>
+          </div>
+            <div style="height: 5px;">
+          </div>
+
+          <div class="loc">
+            <span class="lefttext">Location:</span>
+            <select id="location-input" class="form-control">
+            	<option disabled selected>Select City</option>
+            	<?php
+            		$qry = $db->query("SELECT city FROM locations");
+
+            		while ($city = $qry->fetchColumn()) {
+            			echo "<option>$city</option>";
+            		}
+            	?>
+            </select>
+          </div>
+
+          <div style="height: 10px;">
+
+          </div>
+
+          <div class="datetime">
+            <span class="lefttext">Date:</span>
+            <input type="date" class="form-control" placeholder="MM/DD/YYYY">
+          </div>
+
+          <div style="height: 10px;">
+
+          </div>

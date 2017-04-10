@@ -68,7 +68,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 						<div class="thumbnail">
 							<img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
 							<div class="caption">
-								<h2 class="group inner list-group-item-heading" id="protest-result"><a href id="protest-detail-link">
+								<h2 class="group inner list-group-item-heading" id="protest-result"><a href="<?=$event->URL?>" id="protest-detail-link">
 									<?=$event->name?></a></h2>
 								<p class="group inner list-group-item-text">
 									<?=$event->date?></p>
