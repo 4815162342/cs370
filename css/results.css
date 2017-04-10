@@ -114,20 +114,6 @@ body {
   margin-top: 50px !important;
 }
 
-.sortbutton {
-  margin-bottom: 43px !important;
-  font-family: Open Sans !important;
-  height: 50px;
-  float: right;
-  margin-left: 5px !important;
-  color: white;
-}
-
-.sortbutton:hover {
-  color: white !important;
-  font-weight: bold;
-}
-
 .input-group {
   margin-left: 40%;
   margin-right: 70%;
@@ -142,10 +128,6 @@ body {
 .dropdown-menu {
   margin-top: 1px;
   margin-left: 5px !important;
-}
-
-.sort-menu{
-  margin-top: -42px !important;
 }
 
 .menu-dropdown{
