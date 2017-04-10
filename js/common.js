@@ -112,34 +112,19 @@ function find() {
 
 	var location = $("#location-input").val();
 	if (location) queryString += `location=${location}&`;
-	
+
 	var date = $("#date-input").val();
 	if (date) queryString += `date=${date}&`;
-	
+
 	var issue = $("#input-input").val();
 	if (issue) queryString += `issue=${issue}&`;
 
 	window.location = queryString;
 }
 
-/*
-function click_result() {
-	 var a = document.getElementById('protest-result');
-		a.addEventListener('submit',function(e) {
-				e.preventDefault();
-				var b = document.getElementById('protest-detail-link').value;
-				window.location.href = 'http://adam-sanders.com/protest.php'+b;
-
-		});
-}
-*/
-
 function submitEvent() {
 	var issue = $("#create-event-issue").val();
 	var location = $("#create-event-locaiton").val();
 	var fbLink = $("#create-event-fb-link").val();
 	var URL = $("#create-event-URL").val();
-	
-	
-	
 }

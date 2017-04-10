@@ -11,19 +11,19 @@ foreach ($_GET as $key => $value) {
 			$query_stirng .= 'AND city = ? ';
 			$query_array[] = $value;
 			break;
-			
+
 		case 'date':
 			$query_stirng .= 'AND date BETWEEN (? AND ?) ';
 			$timestamp = strtotime($value);
 			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
 			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
 			break;
-		
+
 		case 'issue':
 			$query_stirng .= 'AND topic_ids LIKE ? ';
 			$query_array[] = "%$value%";
 			break;
-		
+
 		default:
 			// TODO: make a random, interesting query
 			break;
@@ -53,11 +53,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 <body>
 	<?php include('navbar.php'); ?>
 	<div class="container">
-	
+
 		<div class="row">
 			<?php include('search_bar.php'); ?>
 		</div>
-		
+
 		<?php
 			foreach ($results as $event) { ?>
 				<div class="item col-md-3">
@@ -81,7 +81,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 					</div>
 				</div>
 			<?php }
-		
+
 		include('modals/signup.html');
 		include('modals/login.html');
 		include('modals/about-us.html');
