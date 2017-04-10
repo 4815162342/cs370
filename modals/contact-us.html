@@ -7,29 +7,20 @@
 				<h4 class="modal-title">Contact Us</h4>
 			</div>
 			<div class="modal-body" id="contactusmodal2">
-
-				<div class="CUname">
-					<span class="lefttext">Name: </span>
-					<input type="text" class="form-control" id="modalinputs" placeholder="Enter your name here">
-				</div>
-
-				<div class="CUemail">
-					<span class="lefttext">Email: </span>
-					<input type="text" class="form-control" id="modalinputs" placeholder="Enter your email">
-				</div>
-
-				<div class="CUmessage">
-					<span class="lefttext">Message: </span>
+					<p>First Name:</p>
+					<input type="text" class="form-control modalinputs" id="contactus-firstname" placeholder="Enter your first name">
+					<p>Last Name:</p>
+					<input type="text" class="form-control modalinputs" id="contactus-lastname" placeholder="Enter your last name">
+					<p>Email:</p>
+					<input type="text" class="form-control modalinputs" id="contactus-email" placeholder="Enter your email">
+					<p>Message:</p>
 					<div class="form-group">
-						<textarea class="form-control" rows="3" id="comment" placeholder="What would you like to tell us?"></textarea>
+						<textarea class="form-control modalinputs" rows="3" id="comment" placeholder="What would you like to tell us?"></textarea>
 					</div>
-				</div>
 			</div>
-
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default red" data-dismiss="modal">Send Message</button>
+				<button type="button" class="btn btn-default red" data-dismiss="modal" id="contact-us-submit" onclick="contactUs()">Send Message</button>
 			</div>
-
 		</div>
 	</div>
 </div>
