@@ -1,7 +1,7 @@
 <div class="homepagecontent">
 	<div class="logopndesc">
 		<div class="logocenter">
-			<img class="logo" src="img/logo.png">
+			<img id="logo" src="img/logo.png">
 		</div>
 		<div class="pncenter">
 			<span>FindMyProtest</span>

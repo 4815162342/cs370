@@ -7,21 +7,18 @@ body{
 }
 
 @media (min-width:639px) {
-	body {
+	.container {
 		padding: 0 20px;
 	}
 }
 
-.navbar-static-top {
+.navbar {
 	background-color: #003366;
-	height: 100px;
-	width: 100%;
+	color: white;
+	border: none;
 }
 
-.logo {
-	float: left;
-	margin-left: 10px;
-	margin-top: 10px;
+#logo {
 	height: 80px;
 }
 
