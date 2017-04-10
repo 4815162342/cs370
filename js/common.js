@@ -127,7 +127,4 @@ function submitEvent() {
 	var location = $("#create-event-locaiton").val();
 	var fbLink = $("#create-event-fb-link").val();
 	var URL = $("#create-event-URL").val();
-
-
-
 }
