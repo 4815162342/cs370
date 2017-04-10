@@ -8,28 +8,22 @@
 			<div class="modal-body" id="createeventmodal">
 				<div class="issue">
 					<span class="lefttext">Issue: &nbsp</span>
-					<div class="dropdown pullleft">
-						<button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">Event Issue Options
-							<span class="caret"></span></button>
-						<ul class="dropdown-menu">
-							<li><a href="#">Option 1</a></li>
-							<li><a href="#">Option 2</a></li>
-							<li><a href="#">Option 3</a></li>
-						</ul>
-					</div>
-				</div>
-
-				<div style="height: 5px;">
+					<select id="create-event-issue" class="form-control">
+						<option disabled selected>Issue</option>
+						<?php
+							$qry = $db->query("SELECT name FROM topics");
+							
+							while ($name = $qry->fetchColumn()) {
+								echo "<option>$name</option>";
+							}
+						?>
+					</select>
 
 				</div>
 
 				<div class="loc">
 					<span class="lefttext">Location:</span>
-					<input type="text" class="form-control" id="modalinputs" placeholder="Event Location">
-				</div>
-
-				<div style="height: 10px;">
-
+					<input type="text" class="form-control" id="create-event-location" placeholder="Event Location">
 				</div>
 
 				<div class="datetime">
@@ -37,17 +31,12 @@
 					<input type="date" class="form-control" placeholder="MM/DD/YYYY">
 				</div>
 
-				<div style="height: 10px;">
-
-				</div>
-				
-				<div style="height: 10px;"></div>
-
 				<div class="datetime">
 					<span class="lefttext">Time:</span>
 					<div class="dropdown pullleft">
-						<button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">Hour
-<span class="caret"></span></button>
+						<button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">
+							Hour <span class="caret"></span>
+						</button>
 						<ul class="dropdown-menu">
 							<li><a href="#">1</a></li>
 							<li><a href="#">2</a></li>
@@ -64,8 +53,9 @@
 						</ul>
 					</div>
 					<div class="dropdown pullleft">
-						<button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">Minute
-<span class="caret"></span></button>
+						<button class="btn btn-primary dropdown-toggle gray" type="button" data-toggle="dropdown">
+							Minute <span class="caret"></span>
+						</button>
 						<ul class="dropdown-menu">
 							<li><a href="#">00</a></li>
 							<li><a href="#">15</a></li>
@@ -99,23 +89,23 @@
 
 				<div class="eventfblink">
 					<span class="lefttext">Event Facebook Link: </span>
-					<input type="text" class="form-control" id="modalinputs" placeholder="www.fblinkexample.com">
+					<input type="text" class="form-control" id="create-event-fb-link" placeholder="www.fblinkexample.com">
 				</div>
 
 				<div class="imgurl">
 					<span class="lefttext">Image URL: </span>
-					<input type="text" class="form-control" id="modalinputs" placeholder="URL">
+					<input type="text" class="form-control" id="create-event-URL" placeholder="URL">
 				</div>
 
 				<div class="eventDescription">
 					<span class="lefttext">Event Description: </span>
 					<div class="form-group">
-						<textarea class="form-control" rows="7" id="comment" placeholder="Event Description"></textarea>
+						<textarea class="form-control" rows="7" id="create-event-description" placeholder="Event Description"></textarea>
 					</div>
 				</div>
 
 				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Create Event</button>
+					<button type="button" class="btn btn-default" data-dismiss="modal" onclick="submitEvent()">Create Event</button>
 				</div>
 			</div>
 
