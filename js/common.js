@@ -130,3 +130,21 @@ function submitEvent() {
 	var fbLink = $("#create-event-fb-link").val();
 	var URL = $("#create-event-URL").val();
 }
+
+function contactUs() {
+	var first = $("#contactus-firstname").val();
+	var last = $("#contactus-lastname").val();
+	var email = $("#contactus-email").val();
+	var text = $("#contactus-comment").val();
+	
+	var params = {
+		first: first,
+		last: last,
+		email: email,
+		text: text,
+	};
+	
+	$.getJSON("ajax/contact_us",params,function() {
+		
+	});
+}
