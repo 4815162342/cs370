@@ -1,4 +1,16 @@
 <?php
+
+if(isset($_COOKIE['11111'])){// User is logged in
+	$user_check = $db->prepare("SELECT * FROM users WHERE user_id=? AND password=?");
+	$user_check->execute(array($_COOKIE['11111'],$_COOKIE['22222']));
+	$user = $user_check->fetchObject();
+	
+	if(!$user_check){//ID or password mismatch
+		setcookie('11111', null, -1, '/');
+		setcookie('22222', null, -1, '/');
+	}
+}
+
 function uniqueViews($event_id) {
 	global $db;
 	$event_id = intval($event_id);

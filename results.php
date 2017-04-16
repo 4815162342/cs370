@@ -2,7 +2,7 @@
 include('../db.php');
 include('lib/functions.php');
 
-$query_stirng = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE 1 ';
+$query_stirng = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE date > NOW() ';
 $query_array = [];
 
 foreach ($_GET as $key => $value) {
@@ -60,16 +60,18 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 		</div>
 
 		<?php
-			foreach ($results as $event) { ?>
+			foreach ($results as $event) { 
+				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
+			?>
 				<div class="col-md-3">
 					<div class="thumbnail">
 						<img src="/img/<?=rand(1,4) ?>.jpg">
 						<div class="caption">
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
-							<p><?=$event->date?></p>
-							<p><?=$event->address?></p>
-							<p><?=$event->issue_string?></p>
-							<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>
+							<p><?=$event->date_formatted?></p>
+							<?php if ($user)
+								echo '<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>';
+							?>
 						</div>
 					</div>
 				</div>
