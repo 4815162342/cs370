@@ -1,10 +1,14 @@
+<?php
+	$loggedOutStyle = $user? 'display: none;': '';
+	$loggedInStyle = $user? '': 'display: none;';
+?>
 <nav class="navbar navbar-default">
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/">
 				<img class="logo" src="/img/logo.png">
 			</a>
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
@@ -13,12 +17,12 @@
 			<a class="navbar-brand" href="/">FindMyProtest</a>
 		</div>
 		
-		<div class="collapse navbar-collapse">
+		<div class="collapse navbar-collapse" id="navbar_collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li class="loggedOutContent"><a href="#" data-toggle="modal" data-target="#loginmodal">Log In</a></li>
-				<li class="loggedOutContent"><a href="#" data-toggle="modal" data-target="#signupmodal">Sign Up</a></li>
+				<li class="loggedOutContent" style="<?=$loggedOutStyle?>"><a href="#" data-toggle="modal" data-target="#loginmodal">Log In</a></li>
+				<li class="loggedOutContent" style="<?=$loggedOutStyle?>"><a href="#" data-toggle="modal" data-target="#signupmodal">Sign Up</a></li>
 				
-				<div id="navbar-username" class="navbar-text"><?=$user->username?></div>
+				<div id="navbar-username" style="<?=$loggedInStyle?>" class="navbar-text loggedInContent"><?=$user->username?></div>
 				
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
