@@ -40,7 +40,7 @@
 						<li><a href="#" data-toggle="modal" data-target="#contactusmodal">Contact Us</a></li>
 						<li role="separator" class="divider"></li>
 						<li class="loggedInContent" style="<?=$loggedInStyle?>" onclick="logout()">
-							Log Out
+							<a href="#">Log Out</a>
 						</li>
 					</ul>
 				</li>

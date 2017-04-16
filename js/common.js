@@ -104,8 +104,8 @@ function logout() {
 	document.cookie="11111=; expires=31 Dec 1970 12:00:00 UTC";
 	document.cookie="22222=; expires=31 Dec 1970 12:00:00 UTC";
 	
-	$("#loggedOutContent").show();
-	$("#loggedInContent").hide();
+	$(".loggedOutContent").show();
+	$(".loggedInContent").hide();
 }
 
 function find() {
