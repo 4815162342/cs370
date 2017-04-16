@@ -7,12 +7,6 @@ body{
 	color: black;
 }
 
-@media (min-width:639px) {
-	.container {
-		padding: 0 20px;
-	}
-}
-
 .navbar {
 	background-color: #003366;
 	color: white;
@@ -21,20 +15,6 @@ body{
 
 .logo {
 	height: 80px;
-}
-
-.sitename {
-	text-decoration: none;
-	color: white;
-	font-size: 1.9em;
-	float: left;
-	margin-top: 7px;
-	margin-left: 10px;
-	position: absolute;
-}
-
-.sitename:hover{
-	color: #666666;
 }
 
 .menubutton {
@@ -89,6 +69,12 @@ h1#siteTitle {
 	font-size: 3em;
 }
 
+#siteDescription {
+	font-style: italic;
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+
 .pncenter {
 	text-align: center;
 	margin-top: 80px;
@@ -98,34 +84,6 @@ h1#siteTitle {
 	text-align: center;
 	margin-bottom: 10px;
 	font-style: normal !important;
-}
-
-.desctext{
-	color: black;
-	text-align: center;
-	font-size: 16px;
-}
-
-.form-control {
-	width: 250px !important;
-	height: 50px !important;
-	color: #000000 !important;
-	float: left;
-}
-
-.findbutton {
-	height: 50px;
-	width: 150px;
-}
-
-.findbutton:hover {
-	font-weight: bold;
-}
-
-.findtext {
-	font-size: 1.7em;
-	color: white;
-	text-align: center;
 }
 
 .modal-dialog{
