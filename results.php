@@ -77,10 +77,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 				</div>
 			<?php }
 		
-		include('modals/signup.html');
-		include('modals/login.html');
-		include('modals/about-us.html');
-		include('modals/contact-us.html');
+	include('modals/login.html');
+	include('modals/signup.html');
+	include('modals/about-us.html');
+	include('modals/contact-us.php');
+	include('modals/create-event.php');
 		?>
 	</div>
 </body>

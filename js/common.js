@@ -85,6 +85,7 @@ function createAccount(){
 		if(response.id || response.status=="logged_in"){
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
+			document.getElementById('navbar-username').innerHTML = response.username;
 			$('#signupmodal').modal('hide');
 			updateViewAfterLogin();
 		}
@@ -104,8 +105,8 @@ function logout() {
 	document.cookie="11111=; expires=31 Dec 1970 12:00:00 UTC";
 	document.cookie="22222=; expires=31 Dec 1970 12:00:00 UTC";
 	
-	$("#loggedOutContent").show();
-	$("#loggedInContent").hide();
+	$(".loggedOutContent").show();
+	$(".loggedInContent").hide();
 }
 
 function find() {
@@ -128,4 +129,22 @@ function submitEvent() {
 	var location = $("#create-event-locaiton").val();
 	var fbLink = $("#create-event-fb-link").val();
 	var URL = $("#create-event-URL").val();
+}
+
+function contactUs() {
+	var first = $("#contactus-firstname").val();
+	var last = $("#contactus-lastname").val();
+	var email = $("#contactus-email").val();
+	var text = $("#contactus-comment").val();
+	
+	var params = {
+		first: first,
+		last: last,
+		email: email,
+		text: text,
+	};
+	
+	$.getJSON("ajax/contact_us",params,function() {
+		
+	});
 }
