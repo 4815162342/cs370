@@ -2,7 +2,7 @@
 include('../db.php');
 include('lib/functions.php');
 
-$query_stirng = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE 1 ';
+$query_string = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE 1 ';
 $query_array = [];
 
 foreach ($_GET as $key => $value) {
