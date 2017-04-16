@@ -1,5 +1,8 @@
 <?php
-$db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(array($_SERVER['HTTP_USER_AGENT'], $_SERVER['REMOTE_ADDR']));
+$db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(array(
+	$_SERVER['HTTP_USER_AGENT'],
+	$_SERVER['REMOTE_ADDR']
+));
 $unique_views = uniqueViews($event->id);
 ?>
 	<div class="maincont1">

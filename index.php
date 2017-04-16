@@ -8,7 +8,7 @@ $request_uri = str_replace('/', '', $_SERVER['REQUEST_URI']);
 
 // Check if URL is landing_page
 if ($request_uri == '')
-	$page_name = 'landing_page.php';
+	$page_name = 'landing_page';
 
 // Check if URL is a username
 if (!$page_name) {
@@ -17,7 +17,7 @@ if (!$page_name) {
 	$user = $user_prep->fetchObject();
 
 	if ($user)
-		$page_name = 'user.php';
+		$page_name = 'user';
 }
 
 // Check for event URL
@@ -27,22 +27,23 @@ if (!$page_name) {
 	$event = $event_prep->fetchObject();
 
 	if ($event)
-		$page_name = 'event.php';
+		$page_name = 'event';
 
 }
-
-// If none of the others triggered, go to landing_page
-if (!$page_name)
-	header("LOCATION: /");
 ?>
 <!DOCTYPE html>
 <html>
 <head>
 	<base target="_top">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="/img/favicon.ico" rel=icon>
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans">
 	<link rel="stylesheet" type="text/css" href="/css/common.css">
+	<?php
+	if (file_exists("css/$page_name.css"))
+		echo "<link rel='stylesheet' type='text/css' href='/css/$page_name.css'>";
+	?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="/js/common.js"></script>
@@ -50,15 +51,17 @@ if (!$page_name)
 
 <body>
 	<?php include('navbar.php'); ?>
-	<div class="container">
-		<?php
-		include($page_name);
-		include('modals/login.html');
-		include('modals/signup.html');
-		include('modals/about-us.html');
-		include('modals/contact-us.html');
-		include('modals/create-event.php');
-		?>
+	
+	<div class="col-md-8 col-md-offset-2">
+		<?php include("$page_name.php"); ?>
 	</div>
+	
+	<?php
+	include('modals/login.html');
+	include('modals/signup.html');
+	include('modals/about-us.html');
+	include('modals/contact-us.php');
+	include('modals/create-event.php');
+	?>
 </body>
 </html>
