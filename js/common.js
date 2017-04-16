@@ -85,6 +85,7 @@ function createAccount(){
 		if(response.id || response.status=="logged_in"){
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
+			document.getElementById('navbar-username').innerHTML = response.username;
 			$('#signupmodal').modal('hide');
 			updateViewAfterLogin();
 		}
