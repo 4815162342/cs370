@@ -147,3 +147,19 @@ h1#siteTitle {
 .pullleft{
 	display: inline-block !important;
 }
+
+@media(max-width: 767px){
+	#landing_page .form-control {
+		margin-bottom: 10px;
+	}
+	#findButton {width: 100%;}
+}
+
+@media(min-width: 768px){
+	#findButton {width: 170px;}
+	#landing_page {margin-top: 75px;}
+}
+
+a:focus, a:hover {
+	text-decoration: none;
+}
