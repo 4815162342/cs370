@@ -2,7 +2,7 @@
 include('../db.php');
 include('lib/functions.php');
 
-$query_string = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE 1 ';
+$query_stirng = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE date > NOW() ';
 $query_array = [];
 
 foreach ($_GET as $key => $value) {
@@ -41,10 +41,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 <head>
 	<base target="_top">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
 	<link rel="stylesheet" type="text/css" href="/css/common.css" />
 	<link rel="stylesheet" type="text/css" href="/css/results.css" />
+	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="/js/common.js"></script>
@@ -52,36 +53,30 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 
 <body>
 	<?php include('navbar.php'); ?>
-	<div class="container">
+	<div class="col-md-10 col-md-offset-1">
 
-		<div class="row">
+		<div>
 			<?php include('search_bar.php'); ?>
 		</div>
 
 		<?php
-			foreach ($results as $event) { ?>
-				<div class="item col-md-3">
+			foreach ($results as $event) { 
+				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
+			?>
+				<div class="col-md-3">
 					<div class="thumbnail">
-						<img class="group list-group-image" src="/img/<?=rand(1,4) ?>.jpg" alt="" />
+						<img src="/img/<?=rand(1,4) ?>.jpg">
 						<div class="caption">
-							<h2 class="group inner list-group-item-heading" id="protest-result"><a href id="protest-detail-link">
-								<?=$event->name?></a></h2>
-							<p class="group inner list-group-item-text">
-								<?=$event->date?></p>
-							<p class="group inner list-group-item-text"><?=$event->address?></p>
-							<div class="row search-result-bottom">
-								<div class="col-xs-12 col-md-6">
-									<p class="lead"><?=$event->issue_string?></p>
-								</div>
-								<div class="col-xs-12 col-md-6">
-									<a class="btn btn-success red add-button" href="http://www.jquery2dotnet.com">Add to Library</a>
-								</div>
-							</div>
+							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
+							<p><?=$event->date_formatted?></p>
+							<?php if ($user)
+								echo '<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>';
+							?>
 						</div>
 					</div>
 				</div>
 			<?php }
-
+		
 		include('modals/signup.html');
 		include('modals/login.html');
 		include('modals/about-us.html');

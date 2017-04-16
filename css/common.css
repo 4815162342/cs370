@@ -4,12 +4,7 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
-}
-
-@media (min-width:639px) {
-	.container {
-		padding: 0 20px;
-	}
+	color: black;
 }
 
 .navbar {
@@ -18,27 +13,11 @@ body{
 	border: none;
 }
 
-#logo {
+.logo {
 	height: 80px;
 }
 
-.sitename {
-	font-family: Open Sans;
-	text-decoration: none;
-	color: white;
-	font-size: 1.9em;
-	float: left;
-	margin-top: 7px;
-	margin-left: 10px;
-	position: absolute;
-}
-
-.sitename:hover{
-	color: #666666;
-}
-
 .menubutton {
-	font-family: Open Sans;
 	float: right;
 	margin-top: 35px;
 	margin-right: 10px;
@@ -67,7 +46,6 @@ body{
 
 .red {
 	background-color: #A30000 !important;
-	font-family: Open Sans;
 	border-color: #A30000 !important;
 }
 
@@ -81,66 +59,31 @@ body{
 	color: white !important;
 }
 
-.homepagecontent {
-	width: 900px;
-	position: absolute;
-	top: 30%;
-	left: 50%;
-	margin-left: -450px;
+.centered>*{
+	display: block;
+	margin: 0 auto;
 }
 
-.logopndesc {
-  font-style: italic;
+h1#siteTitle {
+	font-weight: normal;
+	font-size: 3em;
 }
 
-.logocenter {
-	height: 80px;
-	width: 80px;
-	position: absolute;
-	left: 43%;
-	bottom: 73%;
-	margin-top: -78px;
+#siteDescription {
+	font-style: italic;
+	font-size: 16px;
+	margin-bottom: 25px;
 }
 
 .pncenter {
 	text-align: center;
 	margin-top: 80px;
-	font-family: Open Sans;
 	text-decoration: none;
 	color: black;
 	font-size: 3em;
 	text-align: center;
-  margin-bottom: 10px;
-  font-style: normal !important;
-}
-
-.desctext{
-	color: black;
-	text-align: center;
-  font-size: 16px;
-}
-
-.form-control {
-	width: 250px !important;
-	height: 50px !important;
-	color: #000000 !important;
-	float: left;
-}
-
-.findbutton {
-	height: 50px;
-	width: 150px;
-}
-
-.findbutton:hover {
-	font-weight: bold;
-}
-
-.findtext {
-	font-family: Open Sans;
-	font-size: 1.7em;
-	color: white;
-	text-align: center;
+	margin-bottom: 10px;
+	font-style: normal !important;
 }
 
 .modal-dialog{
@@ -148,7 +91,7 @@ body{
 }
 
 #signupmodal{
-  height: 100% !important;
+	height: 100% !important;
 }
 
 .modal-content{
@@ -167,42 +110,56 @@ body{
 .input-error{border-color:#d50032;}
 
 .ul1{
-  list-style-type: none;
+	list-style-type: none;
 }
 
 #aboutusintro{
-  font-family:Open Sans;
-  font-size: 1.2em;
-  color: black;
+	font-size: 1.2em;
+	color: black;
 }
 
 .meetteam{
-  font-family:Open Sans;
-  font-size: 1.2em;
-  color: black;
+	font-size: 1.2em;
+	color: black;
 }
 
 @media(max-width: 500px ){
-  .modal-content{
-    width: 300px !important;
-  }
+	.modal-content{
+		width: 300px !important;
+	}
 }
 
 .lefttext{
-  float: left;
-  margin: 10px 0 0 0;
+	float: left;
+	margin: 10px 0 0 0;
 }
 
 .dropdown{
-  margin: 0 0 0 5px;
+	margin: 0 0 0 5px;
 }
 
 .gray {
-  background-color: #cccccc !important;
-  color: black !important;
-  border: #cccccc !important;
+	background-color: #cccccc !important;
+	color: black !important;
+	border: #cccccc !important;
 }
 
 .pullleft{
-  display: inline-block !important;
+	display: inline-block !important;
+}
+
+@media(max-width: 767px){
+	#landing_page .form-control {
+		margin-bottom: 10px;
+	}
+	#findButton {width: 100%;}
+}
+
+@media(min-width: 768px){
+	#findButton {width: 170px;}
+	#landing_page {margin-top: 75px;}
+}
+
+a:focus, a:hover {
+	text-decoration: none;
 }
