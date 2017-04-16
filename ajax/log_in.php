@@ -4,19 +4,22 @@ include_once($_SERVER['DOCUMENT_ROOT']."/lib/include.php");
 
 $email = $_POST['email'];
 
-$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
+$user_check = $db->prepare("SELECT * FROM users WHERE email = ?");
+$user_check->execute(array($email));
+$user = $user_check->fetchObject();
 
-$user_check = $db->prepare("SELECT id FROM users WHERE email=? AND password=?");
-$user_check->execute(array($email, $hash));
-$user_check = $user_check->fetchColumn();
-
-if($user_check){ // Sign in
-	$response['id'] = $user_check;
-	$response['password'] = $hash;
+if($user){
+	
+	if (password_verify($_POST['password'], $user->pass)) {
+		$response['id'] = $user->id;
+		$response['username'] = $user->username;
+		$response['password'] = $user->pass;
+	}
+	else
+		$response['error'] = "That email and password combination didn't match our records.";
 }
-else{ // Account exists but password is wrong
+else
 	$response['error'] = "That email and password combination didn't match our records.";
-}
 
 echo json_encode($response);
 ?>
