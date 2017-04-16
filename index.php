@@ -58,7 +58,7 @@ if (!$page_name) {
 	include('modals/login.html');
 	include('modals/signup.html');
 	include('modals/about-us.html');
-	include('modals/contact-us.html');
+	include('modals/contact-us.php');
 	include('modals/create-event.php');
 	?>
 </body>
