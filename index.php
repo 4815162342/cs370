@@ -36,6 +36,8 @@ if (!$page_name) {
 <head>
 	<base target="_top">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link href="/img/favicon.ico" rel=icon>
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/common.css">
 	<?php
