@@ -15,8 +15,11 @@
 		
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="#" data-toggle="modal" data-target="#loginmodal">Log In</a></li>
-				<li><a href="#" data-toggle="modal" data-target="#signupmodal">Sign Up</a></li>
+				<li class="loggedOutContent"><a href="#" data-toggle="modal" data-target="#loginmodal">Log In</a></li>
+				<li class="loggedOutContent"><a href="#" data-toggle="modal" data-target="#signupmodal">Sign Up</a></li>
+				
+				<div id="navbar-username" class="navbar-text"><?=$user->username?></div>
+				
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
 					<ul class="dropdown-menu">

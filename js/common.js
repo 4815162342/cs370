@@ -1,10 +1,8 @@
 $.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 
 function login() {
-	//var email = $("#login-email").val();
-	//var password = $("#login-password").val();
 	var email = document.getElementById('login-email').value;
-	var password1 = document.getElementById('login-password').value;
+	var password = document.getElementById('login-password').value;
 
 	$("#login-email").removeClass("input-error");
 	$("#login-password").removeClass("input-error");
@@ -21,19 +19,14 @@ function login() {
 		input_error = true;
 	}
 
-	if(input_error){
-		return;
-	}
-
-	var email_check = email.indexOf('@');
-	if(email_check > -1){
-		email=email.slice(0,email_check);
-	}
+	if(input_error) return;
 
 	$.postJSON("ajax/log_in.php",{email:email,password:password},function(response){
-		if(response.user_id || response.status=="logged_in"){
-			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
+		if(response.id || response.status=="logged_in"){
+			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
+			
+			document.getElementById('navbar-username').innerHTML = response.username;
 			$('#loginmodal').modal('hide');
 			updateViewAfterLogin();
 		}
@@ -89,8 +82,8 @@ function createAccount(){
 	};
 
 	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
-		if(response.user_id || response.status=="logged_in"){
-			document.cookie="11111="+response.user_id+"; expires=31 Dec 2019 12:00:00 UTC";
+		if(response.id || response.status=="logged_in"){
+			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
 			$('#signupmodal').modal('hide');
 			updateViewAfterLogin();
@@ -103,8 +96,16 @@ function createAccount(){
 }
 
 function updateViewAfterLogin() {
-	$("#loggedOutButtons").hide();
-	$("#loggedInButtons").show();
+	$(".loggedOutContent").hide();
+	$(".loggedInContent").show();
+}
+
+function logout() {
+	document.cookie="11111=; expires=31 Dec 1970 12:00:00 UTC";
+	document.cookie="22222=; expires=31 Dec 1970 12:00:00 UTC";
+	
+	$("#loggedOutContent").show();
+	$("#loggedInContent").hide();
 }
 
 function find() {
