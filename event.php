@@ -44,7 +44,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 <div class="col-md-5">
 	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
 	<div class="eventorgusername">
-		<span class="lefttext2">Event Organizer:</span>
+		<span class="lefttext2">Organizer:</span>
 		TODO
 	</div>
 	<div class="eventfbevent">
