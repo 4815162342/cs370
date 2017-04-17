@@ -43,7 +43,7 @@ function createAccount(){
 	var email = document.getElementById('signup-email').value;
 	var password1 = document.getElementById('signup-password1').value;
 	var password2 = document.getElementById('signup-password2').value;
-
+	
 	$("#signup-username").removeClass("input-error");
 	$("#signup-email").removeClass("input-error");
 	$("#signup-password1").removeClass("input-error");
@@ -118,7 +118,7 @@ function find() {
 	var date = $("#date-input").val();
 	if (date) queryString += `date=${date}&`;
 
-	var issue = $("#input-input").val();
+	var issue = $("#issue-input").val();
 	if (issue) queryString += `issue=${issue}&`;
 
 	window.location = queryString;
