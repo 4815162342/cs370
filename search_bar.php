@@ -10,7 +10,7 @@
 			?>
 		</select>
 
-		<input placeholder="Date" class="form-control input-lg" type="text" onfocus="(this.type='date')"  id="date-input">
+		<input placeholder="Date (MM/DD/YYYY)" class="form-control input-lg" type="text" onfocus="(this.type='date')"  id="date-input">
 
 		<select id="issue-input" class="form-control input-lg">
 			<option disabled selected>Issue or Topic</option>

@@ -4,6 +4,8 @@ $db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(
 	$_SERVER['REMOTE_ADDR']
 ));
 $unique_views = uniqueViews($event->id);
+$num_saves = db->prepare("SELECT count(uid) FROM events_saved WHERE eid=?");
+$num_saves->execute(array($event->id));
 ?>
 	<div class="maincont1">
 		<div class="maincontimg">
@@ -33,7 +35,7 @@ $unique_views = uniqueViews($event->id);
 				<span class="protname"><?=$event->name ?></span>
 				<button type="button" class="btn btn-default btn-lg btposition">
 	<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
-					<span class="glyphicon glyphicon-heart-empty" aria-hidden="true" onclick="click_result()"></span>
+					<span id="heart_button" class="glyphicon glyphicon-heart-empty" aria-hidden="true" onclick="saveEvent(<?=$event->id?>)"></span>
 </button>
 			</div>
 			<div class="issue">

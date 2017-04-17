@@ -25,7 +25,7 @@ function login() {
 		if(response.id || response.status=="logged_in"){
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
-			
+
 			document.getElementById('navbar-username').innerHTML = response.username;
 			$('#loginmodal').modal('hide');
 			updateViewAfterLogin();
@@ -93,7 +93,15 @@ function createAccount(){
 			$("#signup-email").addClass("input-error");
 		}
 	});
+}
 
+function saveEvent(event_id) {
+	var eventToSave = document.getElementById(event_id).value;
+
+	$.postJSON("ajax/saveEvent.php",eventToSave:eventToSave,function(response){
+		$("#heart_button").removeClass("glyphicon-heart-empty");
+		$("#heart_button").addClass("glyphicon-heart");
+	})
 }
 
 function updateViewAfterLogin() {
@@ -104,9 +112,15 @@ function updateViewAfterLogin() {
 function logout() {
 	document.cookie="11111=; expires=31 Dec 1970 12:00:00 UTC";
 	document.cookie="22222=; expires=31 Dec 1970 12:00:00 UTC";
-	
+
 	$(".loggedOutContent").show();
 	$(".loggedInContent").hide();
+}
+
+function toUserProf() {
+	var queryString = user->username;
+
+	window.location = queryString;
 }
 
 function find() {
@@ -136,15 +150,15 @@ function contactUs() {
 	var last = $("#contactus-lastname").val();
 	var email = $("#contactus-email").val();
 	var text = $("#contactus-comment").val();
-	
+
 	var params = {
 		first: first,
 		last: last,
 		email: email,
 		text: text,
 	};
-	
+
 	$.getJSON("ajax/contact_us",params,function() {
-		
+
 	});
 }
