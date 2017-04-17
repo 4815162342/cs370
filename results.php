@@ -68,6 +68,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 						<img src="/img/<?=rand(1,4) ?>.jpg">
 						<div class="caption">
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
+							<p><?=$event->city?></p>
 							<p><?=$event->date_formatted?></p>
 							<?php if ($user)
 								echo '<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>';
