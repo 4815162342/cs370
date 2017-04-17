@@ -52,7 +52,7 @@ if (!$page_name) {
 <body>
 	<?php include('navbar.php'); ?>
 	
-	<div class="col-md-8 col-md-offset-2">
+	<div id="content" class="col-md-8 col-md-offset-2">
 		<?php include("$page_name.php"); ?>
 	</div>
 	

@@ -38,7 +38,7 @@
 					<ul class="dropdown-menu">
 						<li><a href="#" data-toggle="modal" data-target="#aboutusmodal">About Us</a></li>
 						<li><a href="#" data-toggle="modal" data-target="#contactusmodal">Contact Us</a></li>
-						<li role="separator" class="divider"></li>
+						<li class="loggedInContent" style="<?=$loggedInStyle?>" role="separator" class="divider"></li>
 						<li class="loggedInContent" style="<?=$loggedInStyle?>" onclick="logout()">
 							<a href="#">Log Out</a>
 						</li>
