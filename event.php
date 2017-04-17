@@ -14,27 +14,27 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 <div class="page-header">
 	<h1>
 		<?=$event->name?> 
-		<small><?=$event->date_formatted?></small>
 		<button class="btn btn-default pull-right">
 			<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
 			<span class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
 		</button>
 	</h1>
+	<small><?=$event->date_formatted?></small>
 </div>
 
 <div class="col-md-7">
 	<table class="table">
 		<tbody>
 			<tr>
-				<th>Issues</td>
+				<th class="lefttext2">Issues</td>
 				<td>TODO</td>
 			</tr>
 			<tr>
-				<th>Address</td>
+				<th class="lefttext2">Address</td>
 				<td><?=$event->address?></td>
 			</tr>
 			<tr>
-				<th>Description</th>
+				<th class="lefttext2">Description</th>
 				<td><?=$event->description?></td>
 			</tr>
 		</tbody>
