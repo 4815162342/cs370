@@ -150,7 +150,7 @@ h1#siteTitle {
 }
 
 @media(max-width: 767px){
-	#landing_page .form-control {
+	#search_bar .form-control {
 		margin-bottom: 10px;
 	}
 	#findButton {width: 100%;}

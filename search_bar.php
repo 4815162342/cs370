@@ -15,10 +15,10 @@
 		<select id="issue-input" class="form-control input-lg">
 			<option disabled selected>Issue or Topic</option>
 			<?php
-				$qry = $db->query("SELECT name FROM topics");
+				$qry = $db->query("SELECT id,name FROM topics");
 
-				while ($name = $qry->fetchColumn()) {
-					echo "<option>$name</option>";
+				while ($topic = $qry->fetchColumn()) {
+					echo "<option value='$topic->id'>$topic->name</option>";
 				}
 			?>
 		</select>
