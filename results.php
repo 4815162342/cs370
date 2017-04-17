@@ -63,7 +63,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 			foreach ($results as $event) { 
 				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 			?>
-				<div class="col-md-3">
+				<div class="col-md-3 event">
 					<div class="thumbnail">
 						<img src="/img/<?=rand(1,4) ?>.jpg">
 						<div class="caption">

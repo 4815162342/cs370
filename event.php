@@ -56,7 +56,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 		</span>
 	</div>
 	<div id="event-stats">
-		<div>[TODO] event views</div>
+		<div><?=$unique_views?> event views</div>
 		<div>[TODO] users have saved this event</div>
 	</div>
 </div>
