@@ -1,3 +1,5 @@
 #search_bar {margin-bottom: 25px;}
 
-.thumbnail {min-height: 350px;}
+@media(min-width: 768px){
+	.thumbnail {min-height: 350px;}
+}
