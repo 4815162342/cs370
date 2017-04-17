@@ -60,7 +60,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 		</div>
 
 		<?php
-			foreach ($results as $event) { 
+			if (count($results) == 0)
+				echo "<h1 class='text-center'>No results found</h1>";
+			
+			
+			else foreach ($results as $event) { 
 				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 			?>
 				<div class="col-md-3 event">
