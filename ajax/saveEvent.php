@@ -8,4 +8,6 @@
   	$event_prep = $db->prepare("INSERT INTO events_saved (eid,uid) VALUES (?,?)");
   	$event_prep->execute(array($event_id,$user->id));
   }
+
+  savedEvents($_POST['eventToSave']);
 ?>
