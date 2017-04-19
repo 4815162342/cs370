@@ -1,14 +1,13 @@
 <?php
-function homePageFeeder() {
-	$query;
+
+if(isset($_COOKIE['11111'])){
+	$user_check = $db->prepare("SELECT * FROM users WHERE id=? AND pass = ?");
+	$user_check->execute(array($_COOKIE['11111'],$_COOKIE['22222']));
+	$user = $user_check->fetchObject();
 	
-	// Validate
-	foreach($_GET as $input) {
-		switch ($input) {
-			case 'location':
-				break;
-			
-		}
+	if(!$user){//ID or password mismatch
+		setcookie('11111', null, -1, '/');
+		setcookie('22222', null, -1, '/');
 	}
 }
 

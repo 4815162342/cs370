@@ -1,0 +1,108 @@
+#content {
+	background: white;
+}
+
+#event-image {
+	border-radius: 10px;
+}
+
+#event-stats div{
+	border: #003366 3px solid;
+	border-radius: 10px;
+	width: 45%;
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 5px;
+	min-height: 50px;
+	padding: 10px;
+}
+
+.maincont1{
+	margin-top: 30px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+.mainconttext{
+	float: left;
+	width: 56%;
+}
+.maincontimg{
+	float: right;
+	margin-right: 20px;
+	margin-top: 10px;
+	width: 40%;
+}
+#protimg{
+	width: 100%;
+	margin-bottom: 10px;
+	border-radius: 10px;
+}
+.protname{
+	color: #003366;
+	font-size: 3em;
+}
+.lefttext{
+	color: #A30000;
+	font-size: 2.2em;
+}
+.righttext{
+	color: black;
+	font-size: 2em;
+}
+.lefttext2{
+	color: #A30000;
+	font-size: 1.5em;
+}
+.righttext2{
+	color: black;
+	font-size: 1.4em;
+}
+#usernametext{
+	text-decoration: none;
+}
+.eventorgusername{
+	width: 100%;
+	word-break: break-all;
+	white-space: normal;
+}
+.eventfbevent{
+	width: 100%;
+	word-break: break-all;
+	white-space: normal;
+}
+.eventviews{
+	float: left;
+	width: 30%;
+	height: 20%;
+	background-color: white;
+	border: solid;
+	border-color: #003366;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 10px;
+}
+.eventsaved{
+	float: left;
+	width: 30%;
+	height: 20%;
+	background-color: white;
+	border: solid;
+	border-color: #003366;
+	text-align: center;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-radius: 10px;
+}
+.eventinfo{
+	margin-top: 30px;
+}
+.lefttext3{
+	color: black;
+	font-size: 1.5em;
+}
+.righttext3{
+	color: #A30000;
+	font-size: 1.4em;
+}

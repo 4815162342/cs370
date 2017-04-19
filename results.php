@@ -1,148 +1,88 @@
 <?php
 include('../db.php');
 include('lib/functions.php');
+
+$query_stirng = 'SELECT * FROM events LEFT JOIN locations ON (events.location_id = locations.id) WHERE date > NOW() ';
+$query_array = [];
+
+foreach ($_GET as $key => $value) {
+	switch ($key) {
+		case 'location':
+			$query_stirng .= 'AND city = ? ';
+			$query_array[] = $value;
+			break;
+
+		case 'date':
+			$query_stirng .= 'AND date BETWEEN (? AND ?) ';
+			$timestamp = strtotime($value);
+			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
+			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
+			break;
+
+		case 'issue':
+			$query_stirng .= 'AND topic_ids LIKE ? ';
+			$query_array[] = "%$value%";
+			break;
+
+		default:
+			// TODO: make a random, interesting query
+			break;
+	}
+}
+
+$result_prep = $db->prepare($query_stirng);
+$result_prep->execute($query_array);
+$results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-  <link rel="stylesheet" type="text/css" href="css/results.css" />
-  <script src="javascript.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<base target="_top">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/common.css" />
+	<link rel="stylesheet" type="text/css" href="/css/results.css" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/js/common.js"></script>
 </head>
 
 <body>
-  <nav class="navbar navbar-static-top">
-    <div class="logoimg">
-      <a href="/"><img class="logo" src="img/logo.png"></a>
-      <a href="/" class="sitename"><span class = "sitename">FindMyProtest</span></a>
-      <div class="menubutton">
-        <div class="dropdown">
-          <button class="btn btn-primary dropdown-toggle red" type="button" data-toggle="dropdown">
-              <span class="glyphicon glyphicon-menu-down red"></span>
-            </button>
-          <ul class="dropdown-menu pull-right ">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Help</a></li>
-            <li><a href="#">Settings</a></li>
-          </ul>
-        </div>
-      </div>
-      <p class="acctparagraph">
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginmodal"><span class = "accountbuttons">Log In</span></button>
-        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#signupmodal"><span class = "accountbuttons">Sign Up</span></button>
-      </p>
-    </div>
-  </nav>
+	<?php include('navbar.php'); ?>
+	<div class="col-md-10 col-md-offset-1">
 
-  <!-- Sign up Modal -->
-	<div id="signupmodal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Sign up Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Sign Up</h4>
-				</div>
-				<div class="modal-body" id="signupmodal">
-					<p>First Name:</p>
-					<input type="text" class="form-control modalinputs" id="firstname" placeholder="Enter your first name">
-					<p>Last Name:</p>
-					<input type="text" class="form-control modalinputs" id="lastname" placeholder="Enter your last name">
-					<p>Username:</p>
-					<input type="text" class="form-control modalinputs" id="signup-username" placeholder="Enter a new username">
-					<p>Email:</p>
-					<input type="text" class="form-control modalinputs" id="signup-email" placeholder="Enter your email">
-					<p>Password:</p>
-					<input type="text" class="form-control modalinputs" id="signup-password" placeholder="Enter your password">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" id="signup-modal-submit" data-dismiss="modal" onclick="createAccount()">Sign Up</button>
-				</div>
-			</div>
+		<div>
+			<?php include('search_bar.php'); ?>
 		</div>
+
+		<?php
+			foreach ($results as $event) { 
+				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
+			?>
+				<div class="col-md-3 event">
+					<div class="thumbnail">
+						<img src="/img/<?=rand(1,4) ?>.jpg">
+						<div class="caption">
+							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
+							<p><?=$event->date_formatted?></p>
+							<?php if ($user)
+								echo '<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>';
+							?>
+						</div>
+					</div>
+				</div>
+			<?php }
+		
+	include('modals/login.html');
+	include('modals/signup.html');
+	include('modals/about-us.html');
+	include('modals/contact-us.php');
+	include('modals/create-event.php');
+		?>
 	</div>
-
-  <!-- Log In Modal -->
-	<div id="loginmodal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<!-- Log In Modal content-->
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal">&times;</button>
-					<h4 class="modal-title">Log In</h4>
-				</div>
-				<div class="modal-body" id="modal2">
-					<p>Email:</p>
-					<input type="text" class="form-control modalinputs" id="login-email" placeholder="Enter your email">
-					<p>Password:</p>
-					<input type="text" class="form-control modalinputs" id="login-password" placeholder="Enter password here">
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-dismiss="modal" onclick="login()">Log In</button>
-				</div>
-			</div>
-		</div>
-	</div>
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-mid-12">
-        <div class="input-group" id="adv-search">
-          <input type="text submit" class="form-control" id="keyword-form" placeholder="Search for Protests" />
-          <div class="input-group-btn">
-            <button type="button" class="btn btn-primary red searchiconspacing" id="keyword-search-button"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-          </div>
-
-          <!-- Sort by button -->
-          <div class="btn-group">
-            <button type="button" class="btn red dropdown-toggle sortbutton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-		  Sort By <span class="caret"></span>
-						</button>
-            <ul class="dropdown-menu sort-menu">
-              <li><a href="#">Location</a></li>
-              <li><a href="#">Date</a></li>
-              <li><a href="#">Issue</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
-      <div id="products" class="row list-group">
-        <div class="item	col-xs-4 col-lg-4">
-          <div class="thumbnail">
-            <img class="group list-group-image" src="http://placehold.it/400x250/000/fff" alt="" />
-            <div class="caption">
-              <h2 class="group inner list-group-item-heading" id="protest-result"><a href id="protest-detail-link">
-                [PROTEST TITLE]</a></h2>
-              <p class="group inner list-group-item-text">
-                MM/DD/YYYY</p>
-              <p class="group inner list-group-item-text">ADDRESS</p>
-              <div class="row search-result-bottom">
-                <div class="col-xs-12 col-md-6">
-                  <p class="lead">
-                    [ISSUE]</p>
-                </div>
-                <div class="col-xs-12 col-md-6">
-                  <a class="btn btn-success red add-button" href="http://www.jquery2dotnet.com">Add to Library</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-	<script>
-		var popularNames = <?=json_encode($db->query("SELECT name FROM events LIMIT 10")->fetchAll(PDO::FETCH_ASSOC)) ?>;
-		var dog;
-		console.log("testing");
-	</script>
 </body>
 </html>
