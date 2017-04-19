@@ -28,7 +28,7 @@
 				</li>
 
 				<li id="navbar-username" style="<?=$loggedInStyle?>" class="navbar-text loggedInContent">
-					<a href="www.findmyprotest.org/" + <?=$user->username?>></a>
+					<a href="/<?=$users->username?>"><?=$users->first_name?></a>
 				</li>
 				<li class="loggedInContent" style="<?=$loggedInStyle?>">
 					<a href="#" data-toggle="modal" data-target="#createeventmodal">Create Event</a>
