@@ -43,7 +43,7 @@ function createAccount(){
 	var email = document.getElementById('signup-email').value;
 	var password1 = document.getElementById('signup-password1').value;
 	var password2 = document.getElementById('signup-password2').value;
-	
+
 	$("#signup-username").removeClass("input-error");
 	$("#signup-email").removeClass("input-error");
 	$("#signup-password1").removeClass("input-error");
@@ -98,10 +98,10 @@ function createAccount(){
 function saveEvent(event_id) {
 	var eventToSave = document.getElementById(event_id).value;
 
-	$.postJSON("ajax/saveEvent.php",eventToSave:eventToSave,function(response){
+	$.postJSON("ajax/saveEvent.php",{eventToSave:eventToSave},function(response){
 		$("#heart_button").removeClass("glyphicon-heart-empty");
 		$("#heart_button").addClass("glyphicon-heart");
-	})
+	});
 }
 
 function updateViewAfterLogin() {
@@ -115,12 +115,6 @@ function logout() {
 
 	$(".loggedOutContent").show();
 	$(".loggedInContent").hide();
-}
-
-function toUserProf() {
-	var queryString = user->username;
-
-	window.location = queryString;
 }
 
 function find() {
