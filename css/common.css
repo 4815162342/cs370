@@ -115,7 +115,7 @@ h1#siteTitle {
 }
 
 #aboutusintro{
-	font-size: 1.3em;
+	font-size: 1.2em;
 	color: black;
 }
 
@@ -166,17 +166,18 @@ a:focus, a:hover {
 }
 
 .tgname{
-  font-size: 1.3em;
+  font-size: 1.2em;
 	color: #A30000;
 }
 
 .tgdesc{
-  font-size: 1.2em;
+  font-size: 1.1em;
 	color: black;
 }
 
 .teamimg{
   height: 14em;
+  margin-right: 1.5em;
 }
 
 .tablespace{
