@@ -60,7 +60,11 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 		</div>
 
 		<?php
-			foreach ($results as $event) { 
+			if (count($results) == 0)
+				echo "<h1 class='text-center'>No results found</h1>";
+			
+			
+			else foreach ($results as $event) {
 				$event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 			?>
 				<div class="col-md-3 event">
@@ -68,6 +72,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 						<img src="/img/<?=rand(1,4) ?>.jpg">
 						<div class="caption">
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
+							<p><?=$event->city?></p>
 							<p><?=$event->date_formatted?></p>
 							<?php if ($user)
 								echo '<p><a href="#" class="btn btn-primary red" onclick="saveEvent()">Save Event</a></p>';

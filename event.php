@@ -6,14 +6,16 @@ $db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(
 	$_SERVER['HTTP_USER_AGENT'],
 	$_SERVER['REMOTE_ADDR']
 ));
+
 $unique_views = uniqueViews($event->id);
-$num_saves_prep = db->prepare("SELECT count(uid) FROM events_saved WHERE eid=?");
+
+$num_saves_prep = $db->prepare("SELECT count(*) FROM events_saved WHERE eid = ?");
 $num_saves = $num_saves_prep->execute(array($event->id));
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 ?>
 <div class="page-header">
 	<h1>
-		<?=$event->name?>
+		<?=$event->name?> 
 		<button class="btn btn-default pull-right">
 			<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
 			<span class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
@@ -30,11 +32,11 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 				<td>TODO</td>
 			</tr>
 			<tr>
-				<th class="lefttext2">Location</td>
+				<th class="lefttext2">Address</td>
 				<td><?=$event->address?></td>
 			</tr>
 			<tr>
-				<th class="lefttext2">Event Description</th>
+				<th class="lefttext2">Description</th>
 				<td><?=$event->description?></td>
 			</tr>
 		</tbody>
@@ -44,7 +46,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 <div class="col-md-5">
 	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
 	<div class="eventorgusername">
-		<span class="lefttext2">Event Organizer:</span>
+		<span class="lefttext2">Organizer:</span>
 		TODO
 	</div>
 	<div class="eventfbevent">
