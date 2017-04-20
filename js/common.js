@@ -95,6 +95,77 @@ function createAccount(){
 	});
 }
 
+function createEvent(){
+	var issue = document.getElementById('create-event-issue').value;
+	var location = document.getElementById('create-event-location').value;
+	var date = document.getElementById('create-event-date').value;
+	var time = document.getElementById('create-event-time').value;
+	var fbLink = document.getElementById('create-event-fb-link').value;
+	var imgURL = document.getElementById('create-event-URL').value;
+	var description = document.getElementById('create-event-description').value;
+
+	$("#create-event-issue").removeClass("input-error");
+	$("#create-event-location").removeClass("input-error");
+	$("#create-event-date").removeClass("input-error");
+	$("#create-event-time").removeClass("input-error");
+	$("#create-event-fb-link").removeClass("input-error");
+	$("#create-event-URL").removeClass("input-error");
+	$("#create-event-description").removeClass("input-error");
+
+	var input_error = false;
+
+	if(!issue){
+		$("#create-event-issue").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!location){
+		$("#create-event-location").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!date){
+		$("#create-event-date").addClass("input-error");
+		input_error = true;
+	}
+
+	if(time){
+		$("#create-event-time").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!fbLink){
+		$("#create-event-fb-link").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!imgURL){
+		$("#create-event-URL").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!description){
+		$("#create-event-description").addClass("input-error");
+		input_error = true;
+	}
+
+	if(input_error) return;
+
+	var ajaxParams = {
+		issue:	issue,
+		location:	location,
+		date:	date,
+		time:		time,
+		fbLink:	fbLink,
+		imgURL:	imgURL,
+		description:	description
+	};
+
+	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
+			$('#createeventmodal').modal('hide');
+	});
+}
+
 function saveEvent(event_id) {
 	var eventToSave = document.getElementById(event_id).value;
 
