@@ -6,9 +6,11 @@ $db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(
 	$_SERVER['HTTP_USER_AGENT'],
 	$_SERVER['REMOTE_ADDR']
 ));
+
 $unique_views = uniqueViews($event->id);
-$num_saves = db->prepare("SELECT count(uid) FROM events_saved WHERE eid=?");
-$num_saves->execute(array($event->id));
+$num_saves_prep = $db->prepare("SELECT count(*) FROM events_saved WHERE eid = ?");
+$num_saves = $num_saves_prep->execute(array($event->id));
+
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 ?>
 <div class="page-header">
