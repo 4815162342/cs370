@@ -12,21 +12,21 @@
 						<option disabled selected>Issue</option>
 						<?php
 							$qry = $db->query("SELECT name FROM topics");
-							
+
 							while ($name = $qry->fetchColumn()) {
 								echo "<option>$name</option>";
 							}
 						?>
 					</select>
 				</div>
-				
+
 				<div class="loc">
 					<span class="lefttext">Location</span>
 					<select id="create-event-location" class="form-control">
-						<option disabled selected>Issue</option>
+						<option disabled selected>Location</option>
 						<?php
 							$qry = $db->query("SELECT city FROM locations ORDER BY city");
-							
+
 							while ($city = $qry->fetchColumn()) {
 								echo "<option>$city</option>";
 							}
@@ -36,12 +36,12 @@
 
 				<div class="datetime">
 					<span class="lefttext">Date</span>
-					<input type="date" class="form-control" placeholder="MM/DD/YYYY">
+					<input id="create-event-date" type="date" class="form-control" placeholder="MM/DD/YYYY">
 				</div>
 
 				<div class="datetime">
 					<span class="lefttext">Time</span>
-					<input type="time" class="form-control" placeholder="00:00 pm">
+					<input id="create-event-time" type="time" class="form-control" placeholder="00:00 pm">
 				</div>
 
 				<div class="eventfblink">
