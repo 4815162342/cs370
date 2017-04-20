@@ -29,6 +29,7 @@ function login() {
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
 
 			document.getElementById('navbar-username').innerHTML = response.username;
+			document.getElementById('navbar-username').href = `/${response.username}`;
 			$('#loginmodal').modal('hide');
 			updateViewAfterLogin();
 		}
