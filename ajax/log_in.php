@@ -9,9 +9,10 @@ $user_check->execute(array($email));
 $user = $user_check->fetchObject();
 
 if($user){
-	
+
 	if (password_verify($_POST['password'], $user->pass)) {
 		$response['id'] = $user->id;
+		$response['first_name'] = $user->first_name;
 		$response['username'] = $user->username;
 		$response['password'] = $user->pass;
 	}
