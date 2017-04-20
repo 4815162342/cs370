@@ -170,9 +170,7 @@ function createEvent(){
 }
 
 function saveEvent(event_id) {
-	var eventToSave = document.getElementById(event_id).value;
-
-	$.postJSON("ajax/saveEvent.php",{eventToSave:eventToSave},function(response){
+	$.postJSON("ajax/saveEvent.php",{eventToSave:event_id},function(response){
 		$("#heart_button").removeClass("glyphicon-heart-empty");
 		$("#heart_button").addClass("glyphicon-heart");
 	});
