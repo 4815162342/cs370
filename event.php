@@ -7,10 +7,10 @@ $db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(
 	$_SERVER['REMOTE_ADDR']
 ));
 $unique_views = uniqueViews($event->id);
-
+$num_saves = db->prepare("SELECT count(uid) FROM events_saved WHERE eid=?");
+$num_saves->execute(array($event->id));
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 ?>
-
 <div class="page-header">
 	<h1>
 		<?=$event->name?> 
@@ -50,13 +50,13 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 	<div class="eventfbevent">
 		<span class="lefttext2">
 			<a href="https://facebook.com/events/<?=$event->facebook_id?>" target="_blank">
-				Facebook Event Link 
+				Facebook Event Link
 				<span class="glyphicon glyphicon-share"></span>
 			</a>
 		</span>
 	</div>
 	<div id="event-stats">
 		<div><?=$unique_views?> event views</div>
-		<div>[TODO] users have saved this event</div>
+		<div><?=$num_saves?> users have saved this event</div>
 	</div>
 </div>

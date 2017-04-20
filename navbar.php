@@ -17,7 +17,7 @@
 			</button>
 			<a class="navbar-brand" href="/">FindMyProtest</a>
 		</div>
-		
+
 		<div class="collapse navbar-collapse" id="navbar_collapse">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="loggedOutContent" style="<?=$loggedOutStyle?>">
@@ -26,13 +26,15 @@
 				<li class="loggedOutContent" style="<?=$loggedOutStyle?>">
 					<a href="#" data-toggle="modal" data-target="#signupmodal">Sign Up</a>
 				</li>
-				
-				<div id="navbar-username" style="<?=$loggedInStyle?>" class="navbar-text loggedInContent"><?=$user->username?></div>
+
+				<li id="navbar-username" style="<?=$loggedInStyle?>" class="navbar-text loggedInContent">
+					<a href="/<?=$users->username?>"><?=$users->first_name?></a>
+				</li>
 				<li class="loggedInContent" style="<?=$loggedInStyle?>">
 					<a href="#" data-toggle="modal" data-target="#createeventmodal">Create Event</a>
 				</li>
 
-				
+
 				<li class="dropdown">
 					<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
 					<ul class="dropdown-menu">

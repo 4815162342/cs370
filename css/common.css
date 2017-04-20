@@ -120,7 +120,7 @@ h1#siteTitle {
 }
 
 .meetteam{
-	font-size: 1.2em;
+	font-size: 1.3em;
 	color: black;
 }
 
@@ -163,4 +163,31 @@ h1#siteTitle {
 
 a:focus, a:hover {
 	text-decoration: none;
+}
+
+.tgname{
+  font-size: 1.2em;
+	color: #A30000;
+}
+
+.tgdesc{
+  font-size: 1.1em;
+	color: black;
+}
+
+.teamimg{
+  height: 14em;
+  margin-right: 1.5em;
+}
+
+.tablespace{
+  height: 2em;
+}
+
+.linkedintag{
+  text-decoration: none;
+}
+
+.linkedintag:hover{
+  color: #666666;
 }
