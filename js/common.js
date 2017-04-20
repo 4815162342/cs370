@@ -1,3 +1,5 @@
+if (!document.title) document.title = "FindMyProtest";
+
 $.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 
 function login() {
