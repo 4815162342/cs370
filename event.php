@@ -2,9 +2,10 @@
 include('/../db.php');
 include('/lib/functions.php');
 
-$db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(array(
+$db->prepare("INSERT INTO events_views (user_agent, IP, event_id) VALUES (?,?,?)")->execute(array(
 	$_SERVER['HTTP_USER_AGENT'],
-	$_SERVER['REMOTE_ADDR']
+	$_SERVER['REMOTE_ADDR'],
+	$event->id
 ));
 
 $unique_views = uniqueViews($event->id);
