@@ -12,8 +12,7 @@ $db->prepare("INSERT INTO events_views (user_agent, IP, event_id, user_id) VALUE
 
 $unique_views = uniqueViews($event->id);
 
-$num_saves_prep = $db->prepare("SELECT count(*) FROM events_saved WHERE eid = ?");
-$num_saves = $num_saves_prep->execute(array($event->id));
+$num_saves = $db->query("SELECT COUNT(*) FROM events_saved WHERE eid = $event->id")->fetchColumn();;
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 
 $event->topics_array = explode(',', $event->topic_ids);
