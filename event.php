@@ -12,6 +12,31 @@ $unique_views = uniqueViews($event->id);
 $num_saves_prep = $db->prepare("SELECT count(*) FROM events_saved WHERE eid = ?");
 $num_saves = $num_saves_prep->execute(array($event->id));
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
+
+$event->topics_array = explode(',', $event->topic_ids);
+$event->issues_string = '';
+foreach($event->topics_array as $index => $topic_id) {
+	$topic_id = intval($topic_id);
+	$name = $db->query("SELECT name FROM topics WHERE id = $topic_id")->fetchColumn();
+	
+	if (count($event->topics_array) == 1)
+		$event->issues_string .= $name;
+	
+	else if (count($event->topics_array) == 2)
+		$event->issues_string .= ($index == 0) ? "$name and " : $name;
+	
+	else {
+		if ($index == count($event->topics_array) - 1)
+			$event->issues_string .= $name;
+		
+		else if ($index == count($event->topics_array) - 2)
+			$event->issues_string .= "$name, and ";
+		
+		else
+			$event->issues_string .= "$name, ";
+	}
+}
+
 ?>
 <div class="page-header">
 	<h1>
@@ -29,7 +54,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 		<tbody>
 			<tr>
 				<th class="lefttext2">Issues</td>
-				<td>TODO</td>
+				<td><?=$event->issues_string?></td>
 			</tr>
 			<tr>
 				<th class="lefttext2">Address</td>
