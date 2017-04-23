@@ -216,12 +216,12 @@ function contactUs() {
 	var last = $("#contactus-lastname").val();
 	var email = $("#contactus-email").val();
 	var text = $("#contactus-comment").val();
-
+	
 	var params = {
-		first: first,
-		last: last,
+		first_name: first,
+		last_name: last,
 		email: email,
-		text: text,
+		content: text,
 	};
 
 	$.getJSON("ajax/contact_us",params,function() {
