@@ -49,7 +49,7 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 		<?=$event->name?> 
 		<button class="btn btn-default pull-right loggedInContent">
 			<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
-			<span style="<?=$loggedInStyle?>" class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
+			<span style="<?=$loggedInStyle?>" class="glyphicon glyphicon-heart-empty" onclick="saveEvent(<?=$event->id?>)"></span>
 		</button>
 	</h1>
 	<h4><?=$event->date_formatted?></h4>
