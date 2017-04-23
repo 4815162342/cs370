@@ -39,14 +39,17 @@ foreach($event->topics_array as $index => $topic_id) {
 	}
 }
 
+$loggedOutStyle = $user? 'display: none;': '';
+$loggedInStyle = $user? '': 'display: none;';
+
 $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->fetchObject();
 ?>
 <div class="page-header">
 	<h1>
 		<?=$event->name?> 
-		<button class="btn btn-default pull-right">
+		<button class="btn btn-default pull-right loggedInContent">
 			<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
-			<span class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
+			<span style="<?=$loggedInStyle?>" class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
 		</button>
 	</h1>
 	<small><?=$event->date_formatted?></small>
