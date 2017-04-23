@@ -10,9 +10,16 @@ body{
 
 .navbar {
 	background-color: #003366;
-	color: white;
 	border: none;
 	border-radius: 0;
+}
+
+.navbar a {
+	color: white !important;
+}
+
+.navbar-brand {
+	font-size: 1.6em;
 }
 
 .logo {
@@ -20,7 +27,7 @@ body{
 }
 
 .logo1{
-	height: 2.4em;
+	height: 2.2em;
 	margin-top: -0.64em;
 }
 
