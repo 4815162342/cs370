@@ -39,6 +39,7 @@ foreach($event->topics_array as $index => $topic_id) {
 	}
 }
 
+$event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->fetchObject();
 ?>
 <div class="page-header">
 	<h1>
@@ -74,7 +75,7 @@ foreach($event->topics_array as $index => $topic_id) {
 	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
 	<div class="eventorgusername">
 		<span class="lefttext2">Organizer:</span>
-		TODO
+		<?=$event->author->username?>
 	</div>
 	<div class="eventfbevent">
 		<span class="lefttext2">
