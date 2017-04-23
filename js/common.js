@@ -99,6 +99,7 @@ function createAccount(){
 }
 
 function createEvent(){
+	var eventName = document.getElementById('create-event-name').value;
 	var issue = document.getElementById('create-event-issue').value;
 	var location = document.getElementById('create-event-location').value;
 	var date = document.getElementById('create-event-date').value;
@@ -107,6 +108,7 @@ function createEvent(){
 	var imgURL = document.getElementById('create-event-URL').value;
 	var description = document.getElementById('create-event-description').value;
 
+	$("#create-event-name").removeClass("input-error");
 	$("#create-event-issue").removeClass("input-error");
 	$("#create-event-location").removeClass("input-error");
 	$("#create-event-date").removeClass("input-error");
@@ -116,6 +118,11 @@ function createEvent(){
 	$("#create-event-description").removeClass("input-error");
 
 	var input_error = false;
+
+	if(!name){
+		$("#create-event-name").addClass("input-error");
+		input_error = true;
+	}
 
 	if(!issue){
 		$("#create-event-issue").addClass("input-error");
@@ -155,6 +162,7 @@ function createEvent(){
 	if(input_error) return;
 
 	var ajaxParams = {
+		name: name,
 		issue:	issue,
 		location:	location,
 		date:	date,
@@ -164,7 +172,7 @@ function createEvent(){
 		description:	description
 	};
 
-	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
+	$.postJSON("ajax/create_event.php",ajaxParams,function(response){
 			$('#createeventmodal').modal('hide');
 	});
 }

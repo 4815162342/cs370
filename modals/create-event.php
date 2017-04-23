@@ -6,6 +6,11 @@
 				<h4 class="modal-title">Create a New Event</h4>
 			</div>
 			<div class="modal-body" id="createeventmodal">
+				<div class="event-name">
+					<span class="lefttext">Event Name</span>
+					<input type="text" class="form-control" id="create-event-name" placeholder="Enter your event name">
+				</div>
+				
 				<div class="issue">
 					<span class="lefttext">Issue</span>
 					<select id="create-event-issue" class="form-control">
@@ -46,18 +51,18 @@
 
 				<div class="eventfblink">
 					<span class="lefttext">Facebook Link</span>
-					<input type="text" class="form-control" id="create-event-fb-link" placeholder="www.fblinkexample.com">
+					<input type="text" class="form-control" id="create-event-fb-link" placeholder="Enter Facebook event page link">
 				</div>
 
 				<div class="imgurl">
 					<span class="lefttext">Image URL</span>
-					<input type="text" class="form-control" id="create-event-URL" placeholder="URL">
+					<input type="text" class="form-control" id="create-event-URL" placeholder="Enter your image URL">
 				</div>
 
 				<div class="eventDescription">
 					<span class="lefttext">Description</span>
 					<div class="form-group">
-						<textarea class="form-control" rows="7" id="create-event-description" placeholder="Description"></textarea>
+						<textarea class="form-control" rows="7" id="create-event-description" placeholder="What is this event about?"></textarea>
 					</div>
 				</div>
 
