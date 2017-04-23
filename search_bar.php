@@ -17,7 +17,7 @@
 			<?php
 				$qry = $db->query("SELECT id,name FROM topics");
 
-				while ($topic = $qry->fetchColumn()) {
+				while ($topic = $qry->fetchObject()) {
 					echo "<option value='$topic->id'>$topic->name</option>";
 				}
 			?>

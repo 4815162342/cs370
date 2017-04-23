@@ -1,3 +1,5 @@
+if (!document.title) document.title = "FindMyProtest";
+
 $.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 
 function login() {
@@ -26,7 +28,8 @@ function login() {
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
 
-			document.getElementById('navbar-username').innerHTML = response.username;
+			document.getElementById('navbar-username').innerHTML = response.first_name;
+			document.getElementById('navbar-username').href = `/${response.username}`;
 			$('#loginmodal').modal('hide');
 			updateViewAfterLogin();
 		}
@@ -43,7 +46,7 @@ function createAccount(){
 	var email = document.getElementById('signup-email').value;
 	var password1 = document.getElementById('signup-password1').value;
 	var password2 = document.getElementById('signup-password2').value;
-	
+
 	$("#signup-username").removeClass("input-error");
 	$("#signup-email").removeClass("input-error");
 	$("#signup-password1").removeClass("input-error");
@@ -95,13 +98,82 @@ function createAccount(){
 	});
 }
 
-function saveEvent(event_id) {
-	var eventToSave = document.getElementById(event_id).value;
+function createEvent(){
+	var issue = document.getElementById('create-event-issue').value;
+	var location = document.getElementById('create-event-location').value;
+	var date = document.getElementById('create-event-date').value;
+	var time = document.getElementById('create-event-time').value;
+	var fbLink = document.getElementById('create-event-fb-link').value;
+	var imgURL = document.getElementById('create-event-URL').value;
+	var description = document.getElementById('create-event-description').value;
 
-	$.postJSON("ajax/saveEvent.php",eventToSave:eventToSave,function(response){
+	$("#create-event-issue").removeClass("input-error");
+	$("#create-event-location").removeClass("input-error");
+	$("#create-event-date").removeClass("input-error");
+	$("#create-event-time").removeClass("input-error");
+	$("#create-event-fb-link").removeClass("input-error");
+	$("#create-event-URL").removeClass("input-error");
+	$("#create-event-description").removeClass("input-error");
+
+	var input_error = false;
+
+	if(!issue){
+		$("#create-event-issue").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!location){
+		$("#create-event-location").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!date){
+		$("#create-event-date").addClass("input-error");
+		input_error = true;
+	}
+
+	if(time){
+		$("#create-event-time").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!fbLink){
+		$("#create-event-fb-link").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!imgURL){
+		$("#create-event-URL").addClass("input-error");
+		input_error = true;
+	}
+
+	if(!description){
+		$("#create-event-description").addClass("input-error");
+		input_error = true;
+	}
+
+	if(input_error) return;
+
+	var ajaxParams = {
+		issue:	issue,
+		location:	location,
+		date:	date,
+		time:		time,
+		fbLink:	fbLink,
+		imgURL:	imgURL,
+		description:	description
+	};
+
+	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
+			$('#createeventmodal').modal('hide');
+	});
+}
+
+function saveEvent(event_id) {
+	$.postJSON("ajax/saveEvent.php",{eventToSave:event_id},function(response){
 		$("#heart_button").removeClass("glyphicon-heart-empty");
 		$("#heart_button").addClass("glyphicon-heart");
-	})
+	});
 }
 
 function updateViewAfterLogin() {
@@ -115,12 +187,6 @@ function logout() {
 
 	$(".loggedOutContent").show();
 	$(".loggedInContent").hide();
-}
-
-function toUserProf() {
-	var queryString = user->username;
-
-	window.location = queryString;
 }
 
 function find() {
