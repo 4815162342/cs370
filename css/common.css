@@ -23,6 +23,10 @@ body{
 	margin-top: -0.64em;
 }
 
+.alignment{
+	text-align: center;
+}
+
 .menubutton {
 	float: right;
 	margin-top: 35px;
@@ -76,9 +80,8 @@ h1#siteTitle {
 }
 
 #siteDescription {
-	font-style: italic;
-	font-size: 16px;
-	margin-bottom: 25px;
+	font-size: 1.25em;
+	margin-bottom: 1.1em;
 }
 
 .pncenter {

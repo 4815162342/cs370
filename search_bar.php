@@ -1,4 +1,4 @@
-<div id="search_bar" class="form-inline">
+<div id="search_bar" class="form-inline alignment">
 		<select id="location-input" class="form-control input-lg">
 			<option disabled selected>Select City</option>
 			<?php
