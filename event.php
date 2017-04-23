@@ -52,7 +52,7 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 			<span style="<?=$loggedInStyle?>" class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
 		</button>
 	</h1>
-	<small><?=$event->date_formatted?></small>
+	<h4><?=$event->date_formatted?></h4>
 </div>
 
 <div class="col-md-7">
