@@ -71,38 +71,3 @@
 	word-break: break-all;
 	white-space: normal;
 }
-.eventviews{
-	float: left;
-	width: 30%;
-	height: 20%;
-	background-color: white;
-	border: solid;
-	border-color: #003366;
-	text-align: center;
-	margin-left: 10%;
-	margin-right: 10%;
-	border-radius: 10px;
-}
-.eventsaved{
-	float: left;
-	width: 30%;
-	height: 20%;
-	background-color: white;
-	border: solid;
-	border-color: #003366;
-	text-align: center;
-	margin-left: 10%;
-	margin-right: 10%;
-	border-radius: 10px;
-}
-.eventinfo{
-	margin-top: 30px;
-}
-.lefttext3{
-	color: black;
-	font-size: 1.5em;
-}
-.righttext3{
-	color: #A30000;
-	font-size: 1.4em;
-}
