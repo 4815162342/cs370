@@ -39,17 +39,20 @@ foreach($event->topics_array as $index => $topic_id) {
 	}
 }
 
+$loggedOutStyle = $user? 'display: none;': '';
+$loggedInStyle = $user? '': 'display: none;';
+
 $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->fetchObject();
 ?>
 <div class="page-header">
 	<h1>
 		<?=$event->name?> 
-		<button class="btn btn-default pull-right">
+		<button class="btn btn-default pull-right loggedInContent">
 			<!--glyphicon	should be filled	(so delete the "-empty" part of the class) when someone clicks on the button-->
-			<span class="glyphicon glyphicon-heart-empty" onclick="click_result()"></span>
+			<span style="<?=$loggedInStyle?>" class="glyphicon glyphicon-heart-empty" onclick="saveEvent(<?=$event->id?>)"></span>
 		</button>
 	</h1>
-	<small><?=$event->date_formatted?></small>
+	<h4><?=$event->date_formatted?></h4>
 </div>
 
 <div class="col-md-7">
@@ -72,10 +75,9 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 </div>
 
 <div class="col-md-5">
-	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
+	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,14) ?>.jpg">
 	<div class="eventorgusername">
-		<span class="lefttext2">Organizer:</span>
-		<?=$event->author->username?>
+		<span class="lefttext2">Organized by <b><?=$event->author->username?></b></span>
 	</div>
 	<div class="eventfbevent">
 		<span class="lefttext2">
@@ -86,7 +88,7 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 		</span>
 	</div>
 	<div id="event-stats">
-		<div><?=$unique_views?> event views</div>
-		<div><?=$num_saves?> users have saved this event</div>
+		<div><?=$unique_views?> views</div>
+		<div><?=$num_saves?> saves</div>
 	</div>
 </div>

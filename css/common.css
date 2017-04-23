@@ -4,18 +4,39 @@ body{
 	background-size: cover;
 	background-attachment: fixed;
 	background-image: url("https://s28.postimg.org/puuf4jab1/Protestimg.png");
+	font-family: "Open Sans", sans-serif;
 	color: black;
 }
 
 .navbar {
 	background-color: #003366;
-	color: white;
 	border: none;
 	border-radius: 0;
 }
 
+.navbar a {
+	color: white !important;
+}
+
+.dropdown-menu a {
+	color: black !important;
+}
+
+.navbar-brand {
+	font-size: 1.6em;
+}
+
 .logo {
 	height: 80px;
+}
+
+.logo1{
+	height: 2.2em;
+	margin-top: -0.64em;
+}
+
+.alignment{
+	text-align: center;
 }
 
 .menubutton {
@@ -71,9 +92,8 @@ h1#siteTitle {
 }
 
 #siteDescription {
-	font-style: italic;
-	font-size: 16px;
-	margin-bottom: 25px;
+	font-size: 1.25em;
+	margin-bottom: 1.1em;
 }
 
 .pncenter {

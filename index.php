@@ -14,9 +14,9 @@ if ($request_uri == '')
 if (!$page_name) {
 	$user_prep = $db->prepare("SELECT * FROM users WHERE username = ?");
 	$user_prep->execute(array($request_uri));
-	$user = $user_prep->fetchObject();
-
-	if ($user)
+	$userpage_user = $user_prep->fetchObject();
+	
+	if ($userpage_user)
 		$page_name = 'user';
 }
 
@@ -25,10 +25,9 @@ if (!$page_name) {
 	$event_prep = $db->prepare("SELECT * FROM events WHERE URL = ?");
 	$event_prep->execute(array($request_uri));
 	$event = $event_prep->fetchObject();
-
+	
 	if ($event)
 		$page_name = 'event';
-
 }
 ?>
 <!DOCTYPE html>
@@ -40,6 +39,7 @@ if (!$page_name) {
 	
 	<title>FindMyProtest</title>
 	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/common.css">
 	<?php

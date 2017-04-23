@@ -7,7 +7,7 @@
 	<div class="container-fluid">
 		<div class="navbar-header">
 			<a class="navbar-brand" href="/">
-				<img class="logo" src="/img/logo.png">
+				<img class="logo1" src="/img/logo.png">
 			</a>
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse" aria-expanded="false">
 				<span class="sr-only">Toggle navigation</span>
