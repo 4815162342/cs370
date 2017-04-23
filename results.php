@@ -13,7 +13,7 @@ foreach ($_GET as $key => $value) {
 			break;
 
 		case 'date':
-			$query_string .= 'AND date BETWEEN (? AND ?) ';
+			$query_string .= 'AND (date BETWEEN ? AND ?) ';
 			$timestamp = strtotime($value);
 			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
 			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
@@ -29,7 +29,6 @@ foreach ($_GET as $key => $value) {
 			break;
 	}
 }
-
 $result_prep = $db->prepare($query_string);
 $result_prep->execute($query_array);
 $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
@@ -41,7 +40,8 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 <head>
 	<base target="_top">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
+	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/common.css" />
 	<link rel="stylesheet" type="text/css" href="/css/results.css" />
@@ -69,7 +69,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 			?>
 				<div class="col-md-3 event">
 					<div class="thumbnail">
-						<img src="/img/<?=rand(1,4) ?>.jpg">
+						<img src="/img/<?=rand(1,14) ?>.jpg">
 						<div class="caption">
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
 							<p><?=$event->city?></p>
