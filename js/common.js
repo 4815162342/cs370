@@ -23,7 +23,7 @@ function login() {
 
 	if(input_error) return;
 
-	$.postJSON("ajax/log_in.php",{email:email,password:password},function(response){
+	$.postJSON("/ajax/log_in.php",{email:email,password:password},function(response){
 		if(response.id || response.status=="logged_in"){
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
@@ -84,7 +84,7 @@ function createAccount(){
 		password:	password1
 	};
 
-	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
+	$.postJSON("/ajax/create_account.php",ajaxParams,function(response){
 		if(response.id || response.status=="logged_in"){
 			document.cookie="11111="+response.id+"; expires=31 Dec 2019 12:00:00 UTC";
 			document.cookie="22222="+response.password+"; expires=31 Dec 2019 12:00:00 UTC";
@@ -164,13 +164,13 @@ function createEvent(){
 		description:	description
 	};
 
-	$.postJSON("ajax/create_account.php",ajaxParams,function(response){
+	$.postJSON("/ajax/create_account.php",ajaxParams,function(response){
 			$('#createeventmodal').modal('hide');
 	});
 }
 
 function saveEvent(event_id) {
-	$.postJSON("ajax/saveEvent.php",{eventToSave:event_id},function(response){
+	$.postJSON("/ajax/saveEvent.php",{eventToSave:event_id},function(response){
 		$("#heart_button").removeClass("glyphicon-heart-empty");
 		$("#heart_button").addClass("glyphicon-heart");
 	});
@@ -224,7 +224,7 @@ function contactUs() {
 		content: text,
 	};
 
-	$.getJSON("ajax/contact_us",params,function() {
+	$.getJSON("/ajax/contact_us",params,function() {
 
 	});
 }
