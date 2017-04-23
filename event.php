@@ -77,8 +77,7 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 <div class="col-md-5">
 	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
 	<div class="eventorgusername">
-		<span class="lefttext2">Organizer:</span>
-		<?=$event->author->username?>
+		<span class="lefttext2">Organized by <b><?=$event->author->username?></b></span>
 	</div>
 	<div class="eventfbevent">
 		<span class="lefttext2">
