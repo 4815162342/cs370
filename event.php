@@ -2,16 +2,44 @@
 include('/../db.php');
 include('/lib/functions.php');
 
-$db->prepare("INSERT INTO events_views (user_agent, IP) VALUES (?,?)")->execute(array(
+$user_id = $user ? $user->id : 0;
+$db->prepare("INSERT INTO events_views (user_agent, IP, event_id, user_id) VALUES (?,?,?,?)")->execute(array(
 	$_SERVER['HTTP_USER_AGENT'],
-	$_SERVER['REMOTE_ADDR']
+	$_SERVER['REMOTE_ADDR'],
+	$event->id,
+	$user_id
 ));
 
 $unique_views = uniqueViews($event->id);
 
-$num_saves_prep = $db->prepare("SELECT count(*) FROM events_saved WHERE eid = ?");
-$num_saves = $num_saves_prep->execute(array($event->id));
+$num_saves = $db->query("SELECT COUNT(*) FROM events_saved WHERE eid = $event->id")->fetchColumn();;
 $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
+
+$event->topics_array = explode(',', $event->topic_ids);
+$event->issues_string = '';
+foreach($event->topics_array as $index => $topic_id) {
+	$topic_id = intval($topic_id);
+	$name = $db->query("SELECT name FROM topics WHERE id = $topic_id")->fetchColumn();
+	
+	if (count($event->topics_array) == 1)
+		$event->issues_string .= $name;
+	
+	else if (count($event->topics_array) == 2)
+		$event->issues_string .= ($index == 0) ? "$name and " : $name;
+	
+	else {
+		if ($index == count($event->topics_array) - 1)
+			$event->issues_string .= $name;
+		
+		else if ($index == count($event->topics_array) - 2)
+			$event->issues_string .= "$name, and ";
+		
+		else
+			$event->issues_string .= "$name, ";
+	}
+}
+
+$event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->fetchObject();
 ?>
 <div class="page-header">
 	<h1>
@@ -29,7 +57,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 		<tbody>
 			<tr>
 				<th class="lefttext2">Issues</td>
-				<td>TODO</td>
+				<td><?=$event->issues_string?></td>
 			</tr>
 			<tr>
 				<th class="lefttext2">Address</td>
@@ -47,7 +75,7 @@ $event->date_formatted = date('M jS \a\t g:ia', strtotime($event->date));
 	<img id="event-image" class="img-responsive" src="/img/<?=rand(1,4) ?>.jpg">
 	<div class="eventorgusername">
 		<span class="lefttext2">Organizer:</span>
-		TODO
+		<?=$event->author->username?>
 	</div>
 	<div class="eventfbevent">
 		<span class="lefttext2">
