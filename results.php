@@ -13,7 +13,7 @@ foreach ($_GET as $key => $value) {
 			break;
 
 		case 'date':
-			$query_string .= 'AND date BETWEEN (? AND ?) ';
+			$query_string .= 'AND (date BETWEEN ? AND ?) ';
 			$timestamp = strtotime($value);
 			$query_array[] = date('Y-m-d 00:00:00',$timestamp);
 			$query_array[] = date('Y-m-d 23:59:59',$timestamp);
@@ -29,7 +29,6 @@ foreach ($_GET as $key => $value) {
 			break;
 	}
 }
-
 $result_prep = $db->prepare($query_string);
 $result_prep->execute($query_array);
 $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
