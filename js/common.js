@@ -5,7 +5,7 @@ $.postJSON = (url, data, func) => ($.post(url, data, func, "json"))
 function login() {
 	var email = document.getElementById('login-email').value;
 	var password = document.getElementById('login-password').value;
-
+	
 	$("#login-email").removeClass("input-error");
 	$("#login-password").removeClass("input-error");
 
