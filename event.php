@@ -89,7 +89,7 @@ $event->author = $db->query("SELECT * FROM users WHERE id = $event->user_id")->f
 		</span>
 	</div>
 	<div id="event-stats">
-		<div><?=$unique_views?> event views</div>
-		<div><?=$num_saves?> users have saved this event</div>
+		<div><?=$unique_views?> views</div>
+		<div><?=$num_saves?> saves</div>
 	</div>
 </div>
