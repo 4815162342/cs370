@@ -14,9 +14,9 @@ if ($request_uri == '')
 if (!$page_name) {
 	$user_prep = $db->prepare("SELECT * FROM users WHERE username = ?");
 	$user_prep->execute(array($request_uri));
-	$user = $user_prep->fetchObject();
-
-	if ($user)
+	$userpage_user = $user_prep->fetchObject();
+	
+	if ($userpage_user)
 		$page_name = 'user';
 }
 
@@ -25,10 +25,9 @@ if (!$page_name) {
 	$event_prep = $db->prepare("SELECT * FROM events WHERE URL = ?");
 	$event_prep->execute(array($request_uri));
 	$event = $event_prep->fetchObject();
-
+	
 	if ($event)
 		$page_name = 'event';
-
 }
 ?>
 <!DOCTYPE html>
