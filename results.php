@@ -69,7 +69,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 			?>
 				<div class="col-md-3 event">
 					<div class="thumbnail">
-						<img src="/img/<?=rand(1,4) ?>.jpg">
+						<img src="/img/<?=rand(1,14) ?>.jpg">
 						<div class="caption">
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
 							<p><?=$event->city?></p>
