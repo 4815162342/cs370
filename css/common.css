@@ -18,6 +18,10 @@ body{
 	color: white !important;
 }
 
+.dropdown-menu a {
+	color: black !important;
+}
+
 .navbar-brand {
 	font-size: 1.6em;
 }
