@@ -5,12 +5,13 @@
 				$qry = $db->query("SELECT city FROM locations ORDER BY city");
 
 				while ($city = $qry->fetchColumn()) {
-					echo "<option>$city</option>";
+					$selected = $_GET['location'] == $city ? 'selected' : '';
+					echo "<option $selected>$city</option>";
 				}
 			?>
 		</select>
 
-		<input placeholder="Date (MM/DD/YYYY)" class="form-control input-lg" type="text" onfocus="(this.type='date')"  id="date-input">
+		<input placeholder="Date (MM/DD/YYYY)" class="form-control input-lg" type="text" onfocus="(this.type='date')" id="date-input" value="<?=$_GET['date']?>">
 
 		<select id="issue-input" class="form-control input-lg">
 			<option disabled selected>Issue or Topic</option>
@@ -18,7 +19,8 @@
 				$qry = $db->query("SELECT id,name FROM topics");
 
 				while ($topic = $qry->fetchObject()) {
-					echo "<option value='$topic->id'>$topic->name</option>";
+					$selected = $_GET['issue'] == $topic->id ? 'selected' : '';
+					echo "<option value='$topic->id' $selected>$topic->name</option>";
 				}
 			?>
 		</select>

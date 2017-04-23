@@ -75,13 +75,12 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 							<p><?=$event->city?></p>
 							<p><?=$event->date_formatted?></p>
 							<?php if ($user)
-								echo "<p><a href='#' class='btn btn-primary red' onclick='saveEvent($event->id)'>Save Event</a></p>";
+								echo "<a href='#' class='btn btn-primary red' onclick='saveEvent($event->id)'>Save Event</a>";
 							?>
 						</div>
 					</div>
 				</div>
 			<?php }
-
 	include('modals/login.html');
 	include('modals/signup.html');
 	include('modals/about-us.html');
