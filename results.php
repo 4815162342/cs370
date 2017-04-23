@@ -32,6 +32,11 @@ foreach ($_GET as $key => $value) {
 $result_prep = $db->prepare($query_string);
 $result_prep->execute($query_array);
 $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
+
+if ($user)
+	$saves_array = $db->query("SELECT eid FROM events_saved WHERE uid = $user->id")->fetchAll(PDO::FETCH_COLUMN);
+else
+	$saves_array = [];
 ?>
 
 
@@ -74,7 +79,7 @@ $results = $result_prep->fetchAll(PDO::FETCH_OBJ);
 							<h3><a href="/<?=$event->URL?>"><?=$event->name?></a></h3>
 							<p><?=$event->city?></p>
 							<p><?=$event->date_formatted?></p>
-							<?php if ($user)
+							<?php if ($user && !in_array($event->id.'', $saves_array))
 								echo "<a href='#' class='btn btn-primary red' onclick='saveEvent($event->id)'>Save Event</a>";
 							?>
 						</div>
