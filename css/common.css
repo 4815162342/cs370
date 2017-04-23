@@ -18,6 +18,11 @@ body{
 	height: 80px;
 }
 
+.logo1{
+	height: 2.4em;
+	margin-top: -0.64em;
+}
+
 .menubutton {
 	float: right;
 	margin-top: 35px;
